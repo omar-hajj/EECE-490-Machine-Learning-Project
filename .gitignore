@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.zip
+*.mat
+data/
+tmp/
+.env
+.env.*
+!.env.example
+.ipynb_checkpoints/
+# Charts are embedded in the submitted notebook; these are local preview copies.
+reports/figures/
+# Local user-supplied journal reference; cite its DOI rather than redistributing.
+/paper.pdf

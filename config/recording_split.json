@@ -1,0 +1,44 @@
+{
+  "seed": 490,
+  "unit": "recording",
+  "target_fractions": {
+    "train": 0.6,
+    "validation": 0.2,
+    "test": 0.2
+  },
+  "actual_fractions": {
+    "train": 0.625,
+    "validation": 0.1875,
+    "test": 0.1875
+  },
+  "partitions": {
+    "train": [
+      "F0L",
+      "F0M",
+      "F1L",
+      "F2M",
+      "F3M",
+      "F4L",
+      "F5L",
+      "F6L",
+      "F6M",
+      "F7M"
+    ],
+    "validation": [
+      "F1M",
+      "F2L",
+      "F4M"
+    ],
+    "test": [
+      "F3L",
+      "F5M",
+      "F7L"
+    ]
+  },
+  "notes": [
+    "No sample labels are assigned by this manifest.",
+    "F0L and F0M are training-only; held-out normal intervals need annotation.",
+    "Scenario modes may cross partitions; session independence is unverified.",
+    "Full-corpus EDA preceded this split; it is not a blind benchmark."
+  ]
+}

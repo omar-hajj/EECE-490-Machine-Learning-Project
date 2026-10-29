@@ -1,0 +1,7 @@
+{
+  "status": "provisional measurement inputs; not learned feature selection",
+  "measurement_inputs": ["Ipv", "Vpv", "Vdc", "ia", "ib", "ic", "va", "vb", "vc"],
+  "time_column": "Time",
+  "deferred_estimates": ["Iabc", "If", "Vabc", "Vf"],
+  "reason": "Time is retained for timing but excluded as a predictor. Estimated channels are deferred until initialization and causal processing delay are verified. Raw files remain unchanged."
+}

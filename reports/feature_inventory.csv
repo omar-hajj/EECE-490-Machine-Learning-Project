@@ -1,0 +1,17 @@
+partition,recording,windows,normal,fault,unknown
+train,F0L,708,708,0,0
+train,F0M,695,695,0,0
+train,F1L,635,0,0,635
+train,F2M,710,0,0,710
+train,F3M,339,0,0,339
+train,F4L,710,0,0,710
+train,F5L,705,0,0,705
+train,F6L,710,0,0,710
+train,F6M,710,0,0,710
+train,F7M,710,0,0,710
+validation,F1M,685,0,0,685
+validation,F2L,700,0,0,700
+validation,F4M,710,0,0,710
+test,F3L,507,0,0,507
+test,F5M,710,0,0,710
+test,F7L,710,0,0,710

@@ -1,0 +1,17 @@
+{
+  "file": "paper.pdf",
+  "sha256": "9564ec19f19814b7d14fbd5d3b3104faf13299ceb8230a703c6753913588f544",
+  "bytes": 7087814,
+  "doi": "10.1016/j.ijepes.2020.106457",
+  "pages": 16,
+  "review_date": "2026-10-29",
+  "source": "User-supplied local PDF; title, authors and DOI match the dataset reference",
+  "evidence": {
+    "fault_mapping": "p.7 Table 1; F2 current-sensor context pp.5,12",
+    "sampling": "p.5 section 2.2 and p.10 section 4.1: 100 microseconds",
+    "independence": "p.5 section 2.2: successive independent experiments; p.10 section 4.1",
+    "onset_uncertainty": "pp.10,13: precise physical onset is unknown",
+    "timing_caveat": "p.5 around 7-8 s; p.11 F6 around 11 s; not per-file bounds",
+    "estimated_channels": "p.5 section 2.2: virtual positive-sequence PMU, one-cycle running window, reporting rate 64, interpolation/extrapolation"
+  }
+}
