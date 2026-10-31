@@ -18,7 +18,7 @@ def main():
     at.run()
     assert len(at.exception)==0,[e.message for e in at.exception]
     assert len(at.selectbox)>=3
-    assert len(at.tabs)==4
+    assert len(at.tabs)==5
     initial_metrics={m.label:m.value for m in at.metric}
     assert initial_metrics["Fewer type errors vs B1"]=="74.0%"
     assert initial_metrics["Fewer exact-bus errors vs B1"]=="55.6%"
@@ -34,6 +34,15 @@ def main():
     executed=next(df for df in frames if "Metric" in df)
     assert all(value=="N/A" or value.endswith("%") or value.endswith(" hops") for value in executed.Result)
     assert "99.64%" in executed.Result.tolist()
+    model_table=next(df for df in frames if "Saved trees" in df)
+    assert model_table["Saved trees"].tolist()==[100,1600,6396]
+    assert model_table["Retained rounds"].tolist()==[100,160,39]
+    split_table=next(df for df in frames if "Normals" in df)
+    assert split_table.Cases.tolist()==[10839,3608,3610]
+    # Verify the model selector exposes fitted multiclass parameters as well.
+    at.selectbox[3].select("localization").run()
+    assert len(at.exception)==0,[e.message for e in at.exception]
+    assert any("multiclass" in element.value for element in at.json)
     # Exercise a fault so that its type/location scores and ranking are rendered.
     at.selectbox[1].select("LGA").run()
     at.button[0].click().run(timeout=60)
@@ -45,7 +54,7 @@ def main():
     freeze=json.loads((ROOT / "results/final_freeze.json").read_text())
     for name,expected in freeze["sha256"].items():
         assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest()==expected,name
-    result={"streamlit_app_test_passed":True,"metric_labels":[m.label for m in at.metric],"metric_values":[m.value for m in at.metric],"percentage_display_verified":True,"timing_and_error_reductions_verified":True,"frozen_artifact_hashes_unchanged":True,"scope":"Actual initial Streamlit execution, saved timing/error tables, percentage formatting, fault replay and unchanged frozen artifacts; upload validation covered by direct local inference tests. Browser pixel layout not verified by this harness."}
+    result={"streamlit_app_test_passed":True,"metric_labels":[m.label for m in at.metric],"metric_values":[m.value for m in at.metric],"percentage_display_verified":True,"timing_and_error_reductions_verified":True,"model_inventory_and_parameters_verified":True,"frozen_artifact_hashes_unchanged":True,"scope":"Actual initial Streamlit execution, saved timing/error tables, percentage formatting, model details/selector, fault replay and unchanged frozen artifacts; upload validation covered by direct local inference tests. Browser pixel layout not verified by this harness."}
     (ROOT / "results/dashboard_verification.json").write_text(json.dumps(result,indent=2))
     print(json.dumps(result,indent=2),flush=True)
 

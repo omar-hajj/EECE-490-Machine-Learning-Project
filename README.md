@@ -10,6 +10,8 @@ Run the app from this folder with the existing environment:
 
 Open [the dashboard](http://localhost:8501). This single local app loads the saved models directly.
 
+For a complete project explanation, read [the model and project handbook](reports/MODEL_AND_PROJECT_HANDBOOK.md). The dashboard's **Models & training details** tab shows the exact saved estimators, hyperparameters, retained trees, data split and downloadable report. Regenerate this read-only inventory with `.\.venv\Scripts\python.exe scripts/summarize_models.py`; this verifies frozen checksums without retraining.
+
 **Start with [the roadmap](PROJECT_ROADMAP.md) and [the executed feasibility audit](reports/DATASET_FEASIBILITY.md).** The audit found important restrictions on independent normal events, operating-state diversity and smaller PMU placements. Do not infer broad protection reliability from high simulation accuracy.
 
 ## Executed outcome

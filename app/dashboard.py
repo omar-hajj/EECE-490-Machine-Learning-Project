@@ -25,6 +25,63 @@ def format_result(metric, value):
     return f"{100*value:.2f}%"
 
 
+def show_model_details():
+    path=ROOT / "results/model_inventory.json"
+    if not path.exists():
+        st.info("Run scripts/summarize_models.py to inspect the saved models.")
+        return
+    inventory=json.loads(path.read_text(encoding="utf-8"))
+    primary={r["task"]:r for r in inventory["models"] if r["experiment"]=="full"}
+    labels={"detection":"Fault detection","classification":"Fault type","localization":"Faulted bus"}
+    st.subheader("The models we actually trained")
+    st.write("Our primary algorithm is LightGBM: supervised gradient-boosted decision trees. Three separate classifiers predict normal/fault, one of ten fault types, and one of 164 known fault buses. The type and bus models train on faults only; normal outputs suppress type and bus.")
+    st.caption(f"Saved LightGBM version: {primary['detection']['lightgbm_version']}. The dashboard loads the three full-measurement models. There are {len(inventory['models'])} selected model artifacts across six protocols. This inventory inspects saved artifacts; it does not retrain them.")
+    rows=[]
+    for task,label in labels.items():
+        r=primary[task]; p=r["parameters"]
+        rows.append({"Model":label,"Classes":r["class_count"],"Selected features":r["selected_feature_count"],
+                     "Maximum leaves/tree":p["num_leaves"],"Maximum rounds":p["n_estimators"],
+                     "Retained rounds":r["iterations"],"Saved trees":r["actual_tree_count"],
+                     "Minimum samples/leaf":p["min_child_samples"],
+                     "Recorded candidate training (s)":round(r["training_record"]["training_seconds"],3)})
+    st.dataframe(pd.DataFrame(rows),hide_index=True,width="stretch")
+    st.caption("Multiclass models build one tree per class per boosting round: 160 × 10 = 1,600 type trees; 39 × 164 = 6,396 bus trees. Recorded candidate training time includes its fit and validation scoring; it is separate from inference time and total project runtime.")
+    st.subheader("Inputs and train / validation / test split")
+    st.write(f"{inventory['raw_electrical_columns']:,} electrical columns become {inventory['engineered_features']:,} candidate phasor features: voltage/current magnitudes, ratios, complex changes and valid ABC symmetrical components. Training-only ANOVA screening selects 256 detection features or 512 type/location features. Fault labels, bus labels, resistance, DER metadata and IDs are excluded from predictors.")
+    split=inventory["split"]
+    rows=[]
+    for partition in ["train","validation","test"]:
+        n=split["rows"][partition]; normals=split["composition"][partition]["Normal"]
+        rows.append({"Partition":partition,"Load groups":len(split["groups"][partition]),"Cases":n,"Faults":n-normals,"Normals":normals})
+    st.dataframe(pd.DataFrame(rows),hide_index=True,width="stretch")
+    st.write("Whole loading groups stay together across DER configurations (split seeds 490/491). Duplicate complete vectors are excluded. Shared prefault states across some different loading labels still limit independent operating-state claims. All model selection and calibration preceded the frozen final test.")
+    st.subheader("Parameters and what they mean")
+    chosen=st.selectbox("Inspect a saved primary model",list(labels),format_func=labels.get)
+    r=primary[chosen]; p=r["parameters"]
+    rows=[
+        {"Parameter":"learning_rate","Value":f"{p['learning_rate']} ({p['learning_rate']:.2%})","Meaning":"Contribution of each boosting step"},
+        {"Parameter":"reg_lambda","Value":str(p["reg_lambda"]),"Meaning":"L2 regularization"},
+        {"Parameter":"max_bin","Value":str(p["max_bin"]),"Meaning":"Histogram bins for candidate splits"},
+        {"Parameter":"max_depth","Value":str(p["max_depth"]),"Meaning":"No explicit depth cap; leaf count still limits complexity"},
+        {"Parameter":"class_weight","Value":str(p["class_weight"]),"Meaning":"Balanced only for the highly imbalanced detector"},
+        {"Parameter":"n_jobs / random_state","Value":f"{p['n_jobs']} / {p['random_state']}","Meaning":"Four training threads and fixed model seed"},
+        {"Parameter":"detection decision threshold","Value":f"{r['decision_threshold']:.2%}" if r["decision_threshold"] is not None else "N/A","Meaning":"Validation-selected fault-score cutoff"},
+        {"Parameter":"temperature","Value":f"{r['temperature']:.8f}","Meaning":"Validation-fitted score scaling for multiclass models; detector uncalibrated"},
+    ]
+    st.dataframe(pd.DataFrame(rows),hide_index=True,width="stretch")
+    st.write("Two candidate configurations per task were compared on validation data. Selection used balanced accuracy for detection, macro-F1 for type and exact-bus accuracy for location. Early stopping used validation loss with patience 20 rounds. The location model retained 39 of its allowed 160 rounds. Temperature scaling uses validation data only; location scores remain overconfident on the held-out simulation set.")
+    with st.expander("Every exact estimator and booster parameter"):
+        st.caption("These are native hyperparameter values, not performance rates. Constructor objective=None means the objective was inferred from labels; the fitted booster parameters show the actual objective.")
+        st.json({"estimator":r["estimator"],"constructor_parameters":p,"fitted_booster_parameters":r["booster_parameters"]})
+    with st.expander("Class labels and selected electrical features"):
+        st.write("Class labels",r["classes"])
+        st.dataframe(pd.DataFrame({"Selected feature":r["selected_feature_names"]}),hide_index=True,width="stretch")
+    handbook=ROOT / "reports/MODEL_AND_PROJECT_HANDBOOK.md"
+    if handbook.exists():
+        st.download_button("Download complete project and model report",handbook.read_bytes(),file_name=handbook.name,mime="text/markdown")
+    st.download_button("Download exact saved-model inventory",path.read_bytes(),file_name=path.name,mime="application/json")
+
+
 def show_efficiency():
     paths=[ROOT / "results" / name for name in [
         "relative_error_reduction.csv", "efficiency_timing_summary.csv",
@@ -123,7 +180,7 @@ def show(result):
         st.json(display)
 
 
-replay,upload,results,efficiency=st.tabs(["Replay a held-out case","Upload measurements","Executed experiment results","Accuracy, time & reductions"])
+replay,upload,results,efficiency,model_details=st.tabs(["Replay a held-out case","Upload measurements","Executed experiment results","Accuracy, time & reductions","Models & training details"])
 with replay:
     manifest=pd.read_csv(ROOT / "config/split_manifest.csv")
     cases=manifest[manifest.split.eq("test")]
@@ -165,3 +222,5 @@ with results:
     else: st.write("Run the frozen held-out evaluation to populate this panel.")
 with efficiency:
     show_efficiency()
+with model_details:
+    show_model_details()

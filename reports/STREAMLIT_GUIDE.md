@@ -30,6 +30,8 @@ The same tab shows the sensor-count reduction and resulting accuracy/distance tr
 
 ## Required local files
 
+The **Models & training details** tab explains the three primary LightGBM classifiers, selected features, data split, candidate training times and the difference between boosting rounds and trees. Select a model to inspect exact constructor/booster parameters, labels and feature names. Download the complete handbook or all 18 saved-model configurations. This tab reads `results/model_inventory.json` and `reports/MODEL_AND_PROJECT_HANDBOOK.md`; generate both from the existing saved artifacts with `.\.venv\Scripts\python.exe scripts/summarize_models.py`. This script does not train or alter models.
+
 Keep `artifacts/`, `config/` and `results/metrics.csv`. The comparison tab also reads `results/relative_error_reduction.csv`, `results/efficiency_timing_summary.csv`, `results/efficiency_benchmark_protocol.json` and `results/sensor_budget_tradeoff.csv`. Replay also needs `results/cache/raw.npy` and `results/cache/metadata.csv`. The existing `.venv` already contains the libraries. On a fresh machine, install `requirements.txt` into a Python 3.12 environment. The historical `requirements-lock.txt` records the original research environment and remains unchanged for the frozen experiment's provenance.
 
 Stop Streamlit with **Ctrl+C** in its terminal. The app reuses saved models and does not retrain them.

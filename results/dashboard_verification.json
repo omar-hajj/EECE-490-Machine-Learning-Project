@@ -18,6 +18,7 @@
   ],
   "percentage_display_verified": true,
   "timing_and_error_reductions_verified": true,
+  "model_inventory_and_parameters_verified": true,
   "frozen_artifact_hashes_unchanged": true,
-  "scope": "Actual initial Streamlit execution, saved timing/error tables, percentage formatting, fault replay and unchanged frozen artifacts; upload validation covered by direct local inference tests. Browser pixel layout not verified by this harness."
+  "scope": "Actual initial Streamlit execution, saved timing/error tables, percentage formatting, model details/selector, fault replay and unchanged frozen artifacts; upload validation covered by direct local inference tests. Browser pixel layout not verified by this harness."
 }
