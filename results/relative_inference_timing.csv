@@ -1,0 +1,4 @@
+task,B1_median_ms,LightGBM_median_ms,ML_time_reduction_percent
+detection,0.0133,0.9047499999999999,-6702.631578947368
+classification,0.18980000000000002,1.2437,-555.2687038988407
+localization,9.5902,1.7066,82.20475068298889

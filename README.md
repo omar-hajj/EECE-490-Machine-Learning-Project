@@ -8,6 +8,8 @@ Reproducible comparison of LightGBM and conventional electrical methods for faul
 
 The [final performance report](reports/FINAL_PERFORMANCE_REPORT.md) contains actual held-out results, paired uncertainty, resistance/DER/sensor experiments and error cases.
 
+The additional [efficiency and sensor-budget report](reports/EFFICIENCY_AND_COST.md) reports relative error reduction, a repeated single-case computation benchmark, and sensor-count tradeoffs. These are post-evaluation analyses of frozen models, not new model selection. Computation time is not physical fault detection or breaker clearing delay; PMU-count reduction is not measured monetary savings.
+
 | Held-out metric | B0 | B1 | LightGBM |
 |---|---:|---:|---:|
 | Detection recall | 66.08% | 100% | 100% |
@@ -65,6 +67,8 @@ The delivered directory already contains a frozen completed experiment. Use its 
 .\.venv\Scripts\python.exe scripts/verify_project.py
 .\.venv\Scripts\python.exe scripts/verify_dashboard.py
 .\.venv\Scripts\python.exe scripts/build_report.py
+# Optional post-evaluation computing/sensor-budget benchmark:
+.\.venv\Scripts\python.exe scripts/benchmark_efficiency.py
 ```
 
 The split is frozen before electrical EDA so EDA does not guide choices using final test measurements. Training-only ANOVA screening is fitted separately for each model; deterministic phasor transformation itself has no learned parameters. Baselines are implemented and selected before ML. After all experiment variants are selected, evaluation hashes artifacts and opens the final test. Retuning is then refused. Run follow-up research in a new experiment directory with a new holdout; do not overwrite the completed frozen experiment to improve its reported scores.
