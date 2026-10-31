@@ -19,6 +19,80 @@ st.info("Research decision support. This prototype does not replace certified el
 def engine(): return get_engine()
 
 
+def format_result(metric, value):
+    if pd.isna(value): return "N/A"
+    if metric in {"mean_branch_hops", "median_branch_hops"}: return f"{value:.3f} hops"
+    return f"{100*value:.2f}%"
+
+
+def show_efficiency():
+    paths=[ROOT / "results" / name for name in [
+        "relative_error_reduction.csv", "efficiency_timing_summary.csv",
+        "sensor_budget_tradeoff.csv", "efficiency_benchmark_protocol.json"]]
+    if not all(path.exists() for path in paths):
+        st.info("Run scripts/benchmark_efficiency.py to generate the measured comparison.")
+        return
+    errors=pd.read_csv(paths[0]).set_index("task")
+    timing=pd.read_csv(paths[1]).set_index("component")
+    sensors=pd.read_csv(paths[2])
+    protocol=json.loads(paths[3].read_text())
+    location_reduction=100*(1-timing.at["LightGBM_localization","median_ms"]/timing.at["B1_localization","median_ms"])
+    st.subheader("Who diagnoses faults better, and who computes faster?")
+    st.write("B0 uses fixed detection thresholds. B1 uses electrical rules and a network-based location method. LightGBM uses the saved learned models. These are measured results from the existing frozen experiment.")
+    cols=st.columns(3)
+    cols[0].metric("Fewer type errors vs B1",f"{errors.at['classification','relative_error_reduction_percent']:.1f}%")
+    cols[1].metric("Fewer exact-bus errors vs B1",f"{errors.at['localization','relative_error_reduction_percent']:.1f}%")
+    cols[2].metric("Less localization computation time",f"{location_reduction:.1f}%")
+    st.caption("Error reductions use the full held-out fault set. The time reduction compares median localization-stage computation only; shared feature preparation is excluded.")
+
+    st.subheader("Accuracy and error reduction")
+    metrics=pd.read_csv(ROOT / "results/metrics.csv")
+    test=metrics[(metrics.experiment=="full") & (metrics.partition=="test") & (metrics.stratum=="all")]
+    rows=[]
+    for task,label in [("classification","Fault type"),("localization","Exact fault bus")]:
+        r=errors.loc[task]
+        name="accuracy" if task=="classification" else "exact_bus_accuracy"
+        n=int(test[(test.model=="B1") & (test.task==task) & (test.metric==name)].n.iloc[0])
+        rows.append({"Task":label,"Fault cases":n,"B1 accuracy":f"{100*r.B1_accuracy:.2f}%",
+                     "LightGBM accuracy":f"{100*r.LightGBM_accuracy:.2f}%",
+                     "B1 errors":round(n*(1-r.B1_accuracy)),"LightGBM errors":round(n*(1-r.LightGBM_accuracy)),
+                     "Accuracy gain (percentage points)":f"{r.accuracy_gain_percentage_points:.2f}",
+                     "Relative error reduction":f"{r.relative_error_reduction_percent:.2f}%"})
+    st.dataframe(pd.DataFrame(rows),hide_index=True,width="stretch")
+    st.caption("Relative error reduction = (B1 errors − LightGBM errors) / B1 errors × 100%. An accuracy gain in percentage points is a different quantity.")
+    st.write("Detection accuracy is 100.00% for both B1 and LightGBM on this test set. Only ten distinct normal cases are available, so this does not establish reliable field false-alarm performance. B0 detects faults only; type and location are N/A.")
+
+    st.subheader("Measured computation time")
+    rows=[]
+    for task,label in [("detection","Fault detection"),("classification","Fault type"),("localization","Fault localization")]:
+        b1=timing.loc[f"B1_{task}"]; ml=timing.loc[f"LightGBM_{task}"]
+        faster="LightGBM" if ml.median_ms<b1.median_ms else "B1"
+        reduction=100*(1-min(b1.median_ms,ml.median_ms)/max(b1.median_ms,ml.median_ms))
+        rows.append({"Task":label,"B1 median (ms)":b1.median_ms,"LightGBM median (ms)":ml.median_ms,
+                     "B1 p95 (ms)":b1.p95_ms,"LightGBM p95 (ms)":ml.p95_ms,
+                     "Faster implementation":faster,"Time reduction vs slower method":f"{reduction:.2f}%"})
+    times=pd.DataFrame(rows)
+    st.dataframe(times,hide_index=True,width="stretch",column_config={
+        name:st.column_config.NumberColumn(format="%.4f") for name in times if name.endswith("(ms)")})
+    st.bar_chart(times.set_index("Task")[["B1 median (ms)","LightGBM median (ms)"]],horizontal=True,x_label="Median computation time (ms)")
+    shared=timing.loc["shared_phasor_and_feature_transform"]
+    st.caption(f"Saved benchmark: {protocol['distinct_test_cases']} distinct held-out cases × {protocol['repeats']} passes; {protocol['threads']} threads; ten warm-up cases; shuffled method order. p95 is the 95th percentile, not a worst-case guarantee. B0 detection median: {timing.at['B0_detection','median_ms']:.4f} ms. Shared feature preparation median: {shared.median_ms:.2f} ms (p95 {shared.p95_ms:.2f} ms), reported separately.")
+    st.write("B1 computes detection and classification faster; LightGBM computes localization faster and makes fewer type/bus errors overall. B1 localization uses a predicted type whose classification cost is reported separately. The timings exclude feature preparation, model loading, input validation, measurement acquisition and communication. CPU load affects timings; these are prototype implementations on this computer.")
+    st.info(f"Physical fault-to-detection delay was not measured. This dataset contains pre/post steady-state phasors, without an onset-aligned waveform stream. The {location_reduction:.1f}% localization-stage reduction does not represent faster physical fault clearing or an end-to-end speedup.")
+
+    st.subheader("Sensor reduction and its accuracy cost")
+    rows=[]
+    for count,group in sensors.groupby("PMUs",sort=False):
+        g=group.set_index("model")
+        rows.append({"PMUs":int(count),"Sensor-count reduction vs 93 PMUs":f"{group.PMU_count_reduction_percent.iloc[0]:.2f}%",
+                     "B1 exact-bus accuracy":f"{g.at['B1','exact_bus_accuracy_percent']:.2f}%",
+                     "LightGBM exact-bus accuracy":f"{g.at['LightGBM','exact_bus_accuracy_percent']:.2f}%",
+                     "B1 mean distance (hops)":g.at['B1','mean_branch_hops'],
+                     "LightGBM mean distance (hops)":g.at['LightGBM','mean_branch_hops']})
+    st.dataframe(pd.DataFrame(rows),hide_index=True,width="stretch")
+    st.caption("Sensor counts are not financial savings. These experiments use physically local terminals and different, nonnested placements. Fewer sensors reduce accuracy; under reduced sensors LightGBM makes more exact matches but has larger mean distance errors. The all-released-channel accuracy table above includes additional current terminals and is a different measurement protocol.")
+
+
 def show(result):
     ml=result["lightgbm"]; b1=result["b1"]
     cols=st.columns(3)
@@ -31,16 +105,25 @@ def show(result):
     st.dataframe(pd.DataFrame(records),hide_index=True,width="stretch")
     if "actual" in result: st.write("Actual held-out labels",result["actual"])
     if ml["fault_detected"]:
-        st.write(f"Type score: {ml['type_confidence']:.3f} · Location score: {ml['location_confidence']:.3f}")
-        st.dataframe(pd.DataFrame(ml["top5_buses"]),hide_index=True)
+        st.write(f"Type score: {ml['type_confidence']:.2%} · Location score: {ml['location_confidence']:.2%}")
+        ranked=pd.DataFrame(ml["top5_buses"]).rename(columns={"bus":"Bus","score":"Location score"})
+        ranked["Location score"]=ranked["Location score"].map(lambda score:f"{score:.2%}")
+        st.dataframe(ranked,hide_index=True)
     st.caption(result["confidence_note"])
     st.caption(f"Per-case computation: {result['inference_ms']:.1f} ms; includes feature computation and both comparators.")
     actual=result.get("actual",{}).get("fault_bus")
     st.pyplot(draw_network(engine().topology,ml["fault_bus"],actual))
-    with st.expander("Full inference response"): st.json(result)
+    st.caption("See Accuracy, time & reductions for the repeated B1/LightGBM benchmark and held-out error reductions.")
+    with st.expander("Detailed inference response"):
+        display=json.loads(json.dumps(result))
+        for key in ["fault_score","type_confidence","location_confidence"]:
+            value=display["lightgbm"][key]
+            display["lightgbm"][key]=f"{value:.2%}" if value is not None else None
+        for item in display["lightgbm"]["top5_buses"]: item["score"]=f"{item['score']:.2%}"
+        st.json(display)
 
 
-replay,upload,results=st.tabs(["Replay a held-out case","Upload measurements","Executed experiment results"])
+replay,upload,results,efficiency=st.tabs(["Replay a held-out case","Upload measurements","Executed experiment results","Accuracy, time & reductions"])
 with replay:
     manifest=pd.read_csv(ROOT / "config/split_manifest.csv")
     cases=manifest[manifest.split.eq("test")]
@@ -75,6 +158,10 @@ with results:
     if path.exists():
         df=pd.read_csv(path)
         view=df[(df.experiment=="full")&(df.partition=="test")&(df.stratum=="all")]
-        st.dataframe(view[["model","task","metric","result","n"]],hide_index=True)
+        view=view[["model","task","metric","result","n"]].copy()
+        view["result"]=[format_result(metric,value) for metric,value in zip(view.metric,view.result)]
+        st.dataframe(view.rename(columns={"model":"Method","task":"Task","metric":"Metric","result":"Result","n":"Cases"}),hide_index=True,width="stretch")
         st.warning("Only ten distinct normal test events: low-FPR protection claims are unsupported. Scenario comparisons mix PV, EV and V2G changes.")
     else: st.write("Run the frozen held-out evaluation to populate this panel.")
+with efficiency:
+    show_efficiency()

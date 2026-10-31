@@ -35,4 +35,6 @@ The session began with tracked files deleted (from an earlier GPVS-related proje
 
 ## Actual research outcome
 
+Dashboard update (2026-10-31): added the executed single-case timing benchmark, relative error reductions, accuracy/error counts and sensor-count tradeoffs to a dedicated Streamlit tab. Rates and model scores display as percentages. Physical fault-to-detection delay remains unavailable; the measured localization-stage computation reduction excludes shared preprocessing. Verification covers the comparison tables, percentage formatting, fault replay and unchanged frozen artifacts.
+
 The all-released-channel held-out comparison gives B1/LightGBM type accuracy 98.6111%/99.6389% and exact-bus accuracy 54.8056%/79.9167%. Detection ties under exact-no-change normals, and ten normal events do not establish low-FPR performance. B1 top-5 location accuracy is slightly higher. With 36/21/9 available PMUs, LightGBM has more exact matches but larger mean branch-hop errors. See the final report for actual scenario/resistance results, paired uncertainty and limitations; do not summarize the study as uniform ML superiority.

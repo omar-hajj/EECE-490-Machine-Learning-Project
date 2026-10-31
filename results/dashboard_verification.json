@@ -3,12 +3,21 @@
   "metric_labels": [
     "LightGBM detection",
     "Fault type",
-    "Faulted bus"
+    "Faulted bus",
+    "Fewer type errors vs B1",
+    "Fewer exact-bus errors vs B1",
+    "Less localization computation time"
   ],
   "metric_values": [
     "Fault",
     "LGA",
-    "t_bus2052_l"
+    "t_bus2052_l",
+    "74.0%",
+    "55.6%",
+    "82.2%"
   ],
-  "scope": "Actual initial Streamlit execution and held-out replay button; upload validation covered by direct local inference tests. Browser pixel layout not verified by this harness."
+  "percentage_display_verified": true,
+  "timing_and_error_reductions_verified": true,
+  "frozen_artifact_hashes_unchanged": true,
+  "scope": "Actual initial Streamlit execution, saved timing/error tables, percentage formatting, fault replay and unchanged frozen artifacts; upload validation covered by direct local inference tests. Browser pixel layout not verified by this harness."
 }
