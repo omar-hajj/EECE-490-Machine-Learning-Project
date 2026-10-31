@@ -85,6 +85,10 @@ Type and bus metrics above are conditional on true fault cases; B1 uses its pred
 
 S1/S2/S3/S4/S5/S6 configure PV/EV/V2G percentages as 0/0/0, 30/0/0, 50/20/0, 70/30/0, 70/30/30 and 30/50/50. Profile multipliers also vary by hour. Different scenarios have different sampled fault buses and resistances. These results are scenario associations, not isolated causal effects of PV. S4/S5 share PV and EV levels while V2G differs.
 
+ML exact-bus accuracy ranges from 77.67% (S2) to 81.33% (S6), without a monotonic decline as configured PV increases. Its exact-bus advantage over B1 is 22.17 percentage points in S1, 20.83 in S2 and 28.67 in S6; this is not a controlled PV trend. The observed variation is modest relative to the main overall gap and mixes configuration, location and resistance effects.
+
+![Held-out DER performance](figures/der_performance.png)
+
 ## Fault resistance analysis
 
 {strata('resistance_bin')}
@@ -102,6 +106,8 @@ In the 15–25 ohm test bin, type accuracy is 97.73% for B1 and 99.79% for ML. T
 `full` uses all released measurements: 93 voltage buses and 726 current channels, including 339 remote terminal channels outside the published PMU_93 buses. It must not be described as a physically local 93-PMU measurement system. `available_93` retains the same 93 voltage buses but only 387 local current channels. This provides the reference for sensor-count reductions. `available_36`, `available_21` and `available_9` use intersections of the published PMU_56/36/20 lists with released voltage buses; they are **not** reproductions of the published observability placements. In every `available_N` case only line-current terminals at retained PMU buses are available. Both B1 and ML are independently selected using the same remaining measurements, load split and two-candidate ML search budget. Feature selection is fitted separately on training data for every variant. Model budget is fixed; this is not an exhaustive optimization.
 
 `unseen_s6` excludes S6 from both training and selection validation, then evaluates S6 at held-out test loads. Its baseline is also tuned without S6. This avoids mixing seen loading groups into the shift test. Compare it to the full model's S6 rows in the scenario table. S6 changes EV/V2G as well as PV; it is a DER configuration shift, not a pure PV extrapolation.
+
+On the same 600 held-out S6 faults, ML exact-bus accuracy is 81.17% without S6 training versus 81.33% with S6 included: one fewer correct case. This benchmark does not show material S6 localization degradation. The repeated electrical-state findings and lack of the exact generation code prevent extending that observation to real unseen DER control behavior.
 
 Sensor placements are not nested. Reduced configurations change instrument locations as well as counts; do not claim a controlled causal sensor-count effect.
 
