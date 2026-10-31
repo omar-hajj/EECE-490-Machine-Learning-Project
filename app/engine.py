@@ -1,4 +1,4 @@
-"""Shared inference path for FastAPI and Streamlit; no training at inference time."""
+"""Local inference used directly by Streamlit; no training at inference time."""
 from functools import lru_cache
 from pathlib import Path
 import json

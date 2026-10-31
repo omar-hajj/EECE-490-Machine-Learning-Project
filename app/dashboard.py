@@ -34,7 +34,7 @@ def show(result):
         st.write(f"Type score: {ml['type_confidence']:.3f} · Location score: {ml['location_confidence']:.3f}")
         st.dataframe(pd.DataFrame(ml["top5_buses"]),hide_index=True)
     st.caption(result["confidence_note"])
-    st.caption(f"Warm per-case inference: {result['inference_ms']:.1f} ms; includes feature computation and both comparators.")
+    st.caption(f"Per-case computation: {result['inference_ms']:.1f} ms; includes feature computation and both comparators.")
     actual=result.get("actual",{}).get("fault_bus")
     st.pyplot(draw_network(engine().topology,ml["fault_bus"],actual))
     with st.expander("Full inference response"): st.json(result)

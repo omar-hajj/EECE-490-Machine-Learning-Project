@@ -249,11 +249,11 @@ Location calibration remains imperfect: its held-out mean maximum class score is
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | full | test | 3610 | 0.315741 | 0.871571 | 0.087463 | 0.241433 | prediction from precomputed features/phasors; excludes disk/model loading and feature extraction |
 
-These are batch prediction timings from precomputed electrical features/phasors; they exclude file loading and feature extraction. They do not measure protection clearing time or guarantee real-time deadlines. The deployment smoke test additionally records per-case end-to-end service latency when available.
+These are batch prediction timings from precomputed electrical features/phasors; they exclude file loading and feature extraction. They do not measure protection clearing time or guarantee real-time deadlines. The local inference check additionally records per-case computation including validation and feature extraction.
 
-The executed API contract/replay check passed. Five warm replay cases took a mean 41.12 ms including input validation, feature construction, all three LightGBM models, B0 and B1; model/cache loading and HTTP transport are excluded. See `results/deployment_verification.json`. Streamlit's actual app/replay harness also passed (`results/dashboard_verification.json`).
+Direct local inference checks passed. Five replay cases took a mean 68.29 ms including input validation, feature construction, all three LightGBM models, B0 and B1; model/cache loading is excluded. These smoke-test elapsed times are not the repeated latency benchmark. See `results/streamlit_inference_verification.json`. Streamlit's actual app/replay harness also passed (`results/dashboard_verification.json`).
 
-Docker configuration is supplied, but **Docker is not installed on the execution host** (`where.exe docker` found no executable). The image has not been built or run. Exact next action: install/start Docker Desktop with Linux containers, then run `docker compose up --build` from the project root and check `/health` and the dashboard. This deployment substep remains incomplete.
+Deployment is one local Streamlit application, simplified at the user's request. Run `.\.venv\Scripts\python.exe -m streamlit run app/dashboard.py` from the project folder. The dashboard calls saved models directly for replay and uploaded measurements; no separate backend is started. See `reports/STREAMLIT_GUIDE.md`.
 
 ## Statistical and engineering limits
 

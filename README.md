@@ -2,6 +2,14 @@
 
 Reproducible comparison of LightGBM and conventional electrical methods for fault detection, ten-class fault classification and 164-bus localization on DER-Fault. Built for a third-year Electrical and Computer Engineering project at the American University of Beirut.
 
+Run the app from this folder with the existing environment:
+
+```powershell
+.\.venv\Scripts\python.exe -m streamlit run app/dashboard.py
+```
+
+Open [the dashboard](http://localhost:8501). This single local app loads the saved models directly.
+
 **Start with [the roadmap](PROJECT_ROADMAP.md) and [the executed feasibility audit](reports/DATASET_FEASIBILITY.md).** The audit found important restrictions on independent normal events, operating-state diversity and smaller PMU placements. Do not infer broad protection reliability from high simulation accuracy.
 
 ## Executed outcome
@@ -18,7 +26,7 @@ The additional [efficiency and sensor-budget report](reports/EFFICIENCY_AND_COST
 | Top-3 bus accuracy | N/A | 95.94% | 98.72% |
 | Top-5 bus accuracy | N/A | 99.58% | 99.47% |
 
-This is not uniform ML superiority: B1 has better top-5 location accuracy and smaller mean network-distance errors in the reduced-sensor experiments. Only ten distinct normal test cases remain after deduplication, so low-FPR claims are unsupported. B1 localization uses an approximate source circuit and has transformer-related ambiguities. The API contract checks and actual Streamlit replay test passed. Docker image build/run remains unverified because Docker is absent on this computer.
+This is not uniform ML superiority: B1 has better top-5 location accuracy and smaller mean network-distance errors in the reduced-sensor experiments. Only ten distinct normal test cases remain after deduplication, so low-FPR claims are unsupported. B1 localization uses an approximate source circuit and has transformer-related ambiguities. Deployment is one local Streamlit application calling the saved models directly.
 
 ## Dataset and provenance
 
@@ -32,14 +40,14 @@ Verified release: 19,800 cases; 3,604 electrical columns plus `SampleID`; 93 mea
 
 ## Environment
 
-Use Python 3.12. Create a local virtual environment, then install the executed lock file:
+Use Python 3.12. The current workspace already has a working `.venv`. For a fresh setup, create a local environment and install the project dependencies:
 
 ```powershell
 py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-The current workspace already has `.venv`. Its executable is the working interpreter; the system `python` alias pointed to the Windows Store and did not work. `requirements.txt` documents supported dependency families; `requirements-lock.txt` records the actual executed environment. OpenDSSDirect is needed for source-network construction, not for ordinary saved-model inference.
+The `.venv` executable is the working interpreter; the system `python` alias pointed to the Windows Store and did not work. `requirements.txt` lists the current project dependencies. `requirements-lock.txt` preserves the original executed research environment for provenance, including packages from the initial application version; it is unchanged because its checksum is part of the frozen experiment. OpenDSSDirect is needed for source-network construction, not for ordinary saved-model inference.
 
 ## Reproduce in order
 
@@ -87,19 +95,15 @@ See [preprocessing and baseline reasoning](reports/PREPROCESSING_AND_BASELINES.m
 | `results/` | Tuning history, metrics, paired uncertainty, predictions, error cases and confusion matrices |
 | `results/cache/` | Original numeric and engineered caches; ignored by Git |
 | `reports/` | Feasibility, engineering notes, EDA, plots and final results |
-| `app/` | Shared inference engine, FastAPI backend and Streamlit dashboard |
+| `app/` | Streamlit dashboard and local saved-model inference |
 
 ## Run the prototype
 
 ```powershell
-.\.venv\Scripts\python.exe -m uvicorn app.api:app --host 127.0.0.1 --port 8000
-# In another terminal:
 .\.venv\Scripts\python.exe -m streamlit run app/dashboard.py
 ```
 
-Open [API docs](http://127.0.0.1:8000/docs) and [dashboard](http://localhost:8501). Replay retained test cases, compare B0/B1/LightGBM, view actual labels and a source-topology schematic, or upload one complete measurement case. [API contract and units](reports/INFERENCE_API.md) explain the schema and confidence interpretation.
-
-For Docker, run `docker compose up --build`. The replay cache is mounted read-only; raw datasets never enter the image. Docker availability/build verification is recorded separately in the roadmap, not inferred from the presence of a Dockerfile.
+Open [the dashboard](http://localhost:8501). Replay retained test cases, compare B0/B1/LightGBM, view actual labels and a source-topology schematic, or upload one complete measurement case. The [Streamlit guide](reports/STREAMLIT_GUIDE.md) explains inputs and score interpretation. One terminal runs the whole app; Streamlit calls the saved models directly. Stop it with **Ctrl+C**.
 
 ## Research scope and honest comparison
 

@@ -19,7 +19,7 @@ def main():
     at.button[0].click().run(timeout=60)
     assert len(at.exception)==0,[e.message for e in at.exception]
     assert len(at.metric)==3
-    result={"streamlit_app_test_passed":True,"metric_labels":[m.label for m in at.metric],"metric_values":[m.value for m in at.metric],"scope":"Actual initial app execution and held-out replay button; upload validation covered by shared engine/API contract tests. Browser pixel layout and Docker image not verified by this harness."}
+    result={"streamlit_app_test_passed":True,"metric_labels":[m.label for m in at.metric],"metric_values":[m.value for m in at.metric],"scope":"Actual initial Streamlit execution and held-out replay button; upload validation covered by direct local inference tests. Browser pixel layout not verified by this harness."}
     (ROOT / "results/dashboard_verification.json").write_text(json.dumps(result,indent=2))
     print(json.dumps(result,indent=2),flush=True)
 

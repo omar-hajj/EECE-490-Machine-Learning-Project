@@ -1,0 +1,42 @@
+{
+  "checks_passed": true,
+  "checks": [
+    "balanced sequence physics",
+    "disjoint load groups",
+    "no duplicate vectors across partitions",
+    "local input schema and invalid values",
+    "replay restricted to held-out test cases",
+    "five replay types match saved frozen predictions",
+    "normal output masks bus/type",
+    "cache vs live features"
+  ],
+  "warm_replay_latencies": [
+    {
+      "sample_id": 275,
+      "condition": "Normal",
+      "inference_ms": 157.26180002093315
+    },
+    {
+      "sample_id": 170,
+      "condition": "LGA",
+      "inference_ms": 39.2104999627918
+    },
+    {
+      "sample_id": 185,
+      "condition": "LLAB",
+      "inference_ms": 40.396399912424386
+    },
+    {
+      "sample_id": 200,
+      "condition": "LLABG",
+      "inference_ms": 47.23030002787709
+    },
+    {
+      "sample_id": 215,
+      "condition": "LLLG",
+      "inference_ms": 57.36229999456555
+    }
+  ],
+  "mean_inference_ms": 68.2922599837184,
+  "deployment": "one local Streamlit app calling the saved models directly"
+}
