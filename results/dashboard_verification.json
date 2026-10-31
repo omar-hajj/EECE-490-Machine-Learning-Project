@@ -1,0 +1,14 @@
+{
+  "streamlit_app_test_passed": true,
+  "metric_labels": [
+    "LightGBM detection",
+    "Fault type",
+    "Faulted bus"
+  ],
+  "metric_values": [
+    "Fault",
+    "LGA",
+    "t_bus2052_l"
+  ],
+  "scope": "Actual initial app execution and held-out replay button; upload validation covered by shared engine/API contract tests. Browser pixel layout and Docker image not verified by this harness."
+}

@@ -1,0 +1,991 @@
+experiment,partition,stratum,value,model,task,metric,result,n
+full,validation,all,all,B0,detection,accuracy,0.6668514412416852,3608
+full,validation,all,all,B0,detection,precision,1.0,3608
+full,validation,all,all,B0,detection,recall,0.6661111111111111,3608
+full,validation,all,all,B0,detection,f1,0.7995998666222074,3608
+full,validation,all,all,B0,detection,false_positive_rate,0.0,8
+full,validation,all,all,B0,detection,FPR_95_lower,0.0,8
+full,validation,all,all,B0,detection,FPR_95_upper,0.3694166475528192,8
+full,validation,all,all,B0,detection,recall_at_1pct_FPR,,8
+full,validation,all,all,B0,classification,accuracy,,3600
+full,validation,all,all,B0,classification,macro_f1,,3600
+full,validation,all,all,B0,localization,exact_bus_accuracy,,3600
+full,validation,all,all,B0,localization,top3_accuracy,,3600
+full,validation,all,all,B0,localization,top5_accuracy,,3600
+full,validation,all,all,B0,localization,mean_branch_hops,,3600
+full,validation,all,all,B1,detection,accuracy,1.0,3608
+full,validation,all,all,B1,detection,precision,1.0,3608
+full,validation,all,all,B1,detection,recall,1.0,3608
+full,validation,all,all,B1,detection,f1,1.0,3608
+full,validation,all,all,B1,detection,false_positive_rate,0.0,8
+full,validation,all,all,B1,detection,FPR_95_lower,0.0,8
+full,validation,all,all,B1,detection,FPR_95_upper,0.3694166475528192,8
+full,validation,all,all,B1,detection,recall_at_1pct_FPR,,8
+full,validation,all,all,B1,classification,accuracy,0.9908333333333333,3600
+full,validation,all,all,B1,classification,macro_f1,0.9908352317011702,3600
+full,validation,all,all,B1,classification,end_to_end_accuracy,0.9908333333333333,3600
+full,validation,all,all,B1,localization,exact_bus_accuracy,0.5477777777777778,3600
+full,validation,all,all,B1,localization,top3_accuracy,0.9572222222222222,3600
+full,validation,all,all,B1,localization,top5_accuracy,0.9947222222222222,3600
+full,validation,all,all,B1,localization,end_to_end_exact_bus_accuracy,0.5477777777777778,3600
+full,validation,all,all,B1,localization,mean_branch_hops,0.5636111111111111,3600
+full,validation,all,all,B1,localization,median_branch_hops,0.0,3600
+full,validation,all,all,LightGBM,detection,accuracy,1.0,3608
+full,validation,all,all,LightGBM,detection,precision,1.0,3608
+full,validation,all,all,LightGBM,detection,recall,1.0,3608
+full,validation,all,all,LightGBM,detection,f1,1.0,3608
+full,validation,all,all,LightGBM,detection,false_positive_rate,0.0,8
+full,validation,all,all,LightGBM,detection,FPR_95_lower,0.0,8
+full,validation,all,all,LightGBM,detection,FPR_95_upper,0.3694166475528192,8
+full,validation,all,all,LightGBM,detection,recall_at_1pct_FPR,,8
+full,validation,all,all,LightGBM,classification,accuracy,0.9975,3600
+full,validation,all,all,LightGBM,classification,macro_f1,0.9975003783014594,3600
+full,validation,all,all,LightGBM,classification,end_to_end_accuracy,0.9975,3600
+full,validation,all,all,LightGBM,localization,exact_bus_accuracy,0.7969444444444445,3600
+full,validation,all,all,LightGBM,localization,top3_accuracy,0.9858333333333333,3600
+full,validation,all,all,LightGBM,localization,top5_accuracy,0.9933333333333333,3600
+full,validation,all,all,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7969444444444445,3600
+full,validation,all,all,LightGBM,localization,mean_branch_hops,0.34805555555555556,3600
+full,validation,all,all,LightGBM,localization,median_branch_hops,0.0,3600
+full,validation,Scenario_ID,S1,B0,detection,accuracy,0.6694352159468439,602
+full,validation,Scenario_ID,S1,B0,detection,precision,1.0,602
+full,validation,Scenario_ID,S1,B0,detection,recall,0.6683333333333333,602
+full,validation,Scenario_ID,S1,B0,detection,f1,0.8011988011988012,602
+full,validation,Scenario_ID,S1,B0,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S1,B0,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S1,B0,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S1,B0,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S1,B0,classification,accuracy,,600
+full,validation,Scenario_ID,S1,B0,classification,macro_f1,,600
+full,validation,Scenario_ID,S1,B0,localization,exact_bus_accuracy,,600
+full,validation,Scenario_ID,S1,B0,localization,top3_accuracy,,600
+full,validation,Scenario_ID,S1,B0,localization,top5_accuracy,,600
+full,validation,Scenario_ID,S1,B0,localization,mean_branch_hops,,600
+full,validation,Scenario_ID,S1,B1,detection,accuracy,1.0,602
+full,validation,Scenario_ID,S1,B1,detection,precision,1.0,602
+full,validation,Scenario_ID,S1,B1,detection,recall,1.0,602
+full,validation,Scenario_ID,S1,B1,detection,f1,1.0,602
+full,validation,Scenario_ID,S1,B1,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S1,B1,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S1,B1,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S1,B1,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S1,B1,classification,accuracy,0.9916666666666667,600
+full,validation,Scenario_ID,S1,B1,classification,macro_f1,0.9916789415368195,600
+full,validation,Scenario_ID,S1,B1,classification,end_to_end_accuracy,0.9916666666666667,600
+full,validation,Scenario_ID,S1,B1,localization,exact_bus_accuracy,0.5283333333333333,600
+full,validation,Scenario_ID,S1,B1,localization,top3_accuracy,0.95,600
+full,validation,Scenario_ID,S1,B1,localization,top5_accuracy,0.99,600
+full,validation,Scenario_ID,S1,B1,localization,end_to_end_exact_bus_accuracy,0.5283333333333333,600
+full,validation,Scenario_ID,S1,B1,localization,mean_branch_hops,0.585,600
+full,validation,Scenario_ID,S1,B1,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S1,LightGBM,detection,accuracy,1.0,602
+full,validation,Scenario_ID,S1,LightGBM,detection,precision,1.0,602
+full,validation,Scenario_ID,S1,LightGBM,detection,recall,1.0,602
+full,validation,Scenario_ID,S1,LightGBM,detection,f1,1.0,602
+full,validation,Scenario_ID,S1,LightGBM,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S1,LightGBM,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S1,LightGBM,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S1,LightGBM,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S1,LightGBM,classification,accuracy,0.995,600
+full,validation,Scenario_ID,S1,LightGBM,classification,macro_f1,0.9949997685024423,600
+full,validation,Scenario_ID,S1,LightGBM,classification,end_to_end_accuracy,0.995,600
+full,validation,Scenario_ID,S1,LightGBM,localization,exact_bus_accuracy,0.7866666666666666,600
+full,validation,Scenario_ID,S1,LightGBM,localization,top3_accuracy,0.985,600
+full,validation,Scenario_ID,S1,LightGBM,localization,top5_accuracy,0.995,600
+full,validation,Scenario_ID,S1,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7866666666666666,600
+full,validation,Scenario_ID,S1,LightGBM,localization,mean_branch_hops,0.375,600
+full,validation,Scenario_ID,S1,LightGBM,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S2,B0,detection,accuracy,0.6578073089700996,602
+full,validation,Scenario_ID,S2,B0,detection,precision,1.0,602
+full,validation,Scenario_ID,S2,B0,detection,recall,0.6566666666666666,602
+full,validation,Scenario_ID,S2,B0,detection,f1,0.7927565392354124,602
+full,validation,Scenario_ID,S2,B0,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S2,B0,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S2,B0,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S2,B0,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S2,B0,classification,accuracy,,600
+full,validation,Scenario_ID,S2,B0,classification,macro_f1,,600
+full,validation,Scenario_ID,S2,B0,localization,exact_bus_accuracy,,600
+full,validation,Scenario_ID,S2,B0,localization,top3_accuracy,,600
+full,validation,Scenario_ID,S2,B0,localization,top5_accuracy,,600
+full,validation,Scenario_ID,S2,B0,localization,mean_branch_hops,,600
+full,validation,Scenario_ID,S2,B1,detection,accuracy,1.0,602
+full,validation,Scenario_ID,S2,B1,detection,precision,1.0,602
+full,validation,Scenario_ID,S2,B1,detection,recall,1.0,602
+full,validation,Scenario_ID,S2,B1,detection,f1,1.0,602
+full,validation,Scenario_ID,S2,B1,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S2,B1,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S2,B1,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S2,B1,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S2,B1,classification,accuracy,0.9933333333333333,600
+full,validation,Scenario_ID,S2,B1,classification,macro_f1,0.9933321756525766,600
+full,validation,Scenario_ID,S2,B1,classification,end_to_end_accuracy,0.9933333333333333,600
+full,validation,Scenario_ID,S2,B1,localization,exact_bus_accuracy,0.5216666666666666,600
+full,validation,Scenario_ID,S2,B1,localization,top3_accuracy,0.9633333333333334,600
+full,validation,Scenario_ID,S2,B1,localization,top5_accuracy,0.9916666666666667,600
+full,validation,Scenario_ID,S2,B1,localization,end_to_end_exact_bus_accuracy,0.5216666666666666,600
+full,validation,Scenario_ID,S2,B1,localization,mean_branch_hops,0.5866666666666667,600
+full,validation,Scenario_ID,S2,B1,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S2,LightGBM,detection,accuracy,1.0,602
+full,validation,Scenario_ID,S2,LightGBM,detection,precision,1.0,602
+full,validation,Scenario_ID,S2,LightGBM,detection,recall,1.0,602
+full,validation,Scenario_ID,S2,LightGBM,detection,f1,1.0,602
+full,validation,Scenario_ID,S2,LightGBM,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S2,LightGBM,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S2,LightGBM,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S2,LightGBM,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S2,LightGBM,classification,accuracy,1.0,600
+full,validation,Scenario_ID,S2,LightGBM,classification,macro_f1,1.0,600
+full,validation,Scenario_ID,S2,LightGBM,classification,end_to_end_accuracy,1.0,600
+full,validation,Scenario_ID,S2,LightGBM,localization,exact_bus_accuracy,0.81,600
+full,validation,Scenario_ID,S2,LightGBM,localization,top3_accuracy,0.9866666666666667,600
+full,validation,Scenario_ID,S2,LightGBM,localization,top5_accuracy,0.995,600
+full,validation,Scenario_ID,S2,LightGBM,localization,end_to_end_exact_bus_accuracy,0.81,600
+full,validation,Scenario_ID,S2,LightGBM,localization,mean_branch_hops,0.33166666666666667,600
+full,validation,Scenario_ID,S2,LightGBM,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S3,B0,detection,accuracy,0.6572379367720466,601
+full,validation,Scenario_ID,S3,B0,detection,precision,1.0,601
+full,validation,Scenario_ID,S3,B0,detection,recall,0.6566666666666666,601
+full,validation,Scenario_ID,S3,B0,detection,f1,0.7927565392354124,601
+full,validation,Scenario_ID,S3,B0,detection,false_positive_rate,0.0,1
+full,validation,Scenario_ID,S3,B0,detection,FPR_95_lower,0.0,1
+full,validation,Scenario_ID,S3,B0,detection,FPR_95_upper,0.975,1
+full,validation,Scenario_ID,S3,B0,detection,recall_at_1pct_FPR,,1
+full,validation,Scenario_ID,S3,B0,classification,accuracy,,600
+full,validation,Scenario_ID,S3,B0,classification,macro_f1,,600
+full,validation,Scenario_ID,S3,B0,localization,exact_bus_accuracy,,600
+full,validation,Scenario_ID,S3,B0,localization,top3_accuracy,,600
+full,validation,Scenario_ID,S3,B0,localization,top5_accuracy,,600
+full,validation,Scenario_ID,S3,B0,localization,mean_branch_hops,,600
+full,validation,Scenario_ID,S3,B1,detection,accuracy,1.0,601
+full,validation,Scenario_ID,S3,B1,detection,precision,1.0,601
+full,validation,Scenario_ID,S3,B1,detection,recall,1.0,601
+full,validation,Scenario_ID,S3,B1,detection,f1,1.0,601
+full,validation,Scenario_ID,S3,B1,detection,false_positive_rate,0.0,1
+full,validation,Scenario_ID,S3,B1,detection,FPR_95_lower,0.0,1
+full,validation,Scenario_ID,S3,B1,detection,FPR_95_upper,0.975,1
+full,validation,Scenario_ID,S3,B1,detection,recall_at_1pct_FPR,,1
+full,validation,Scenario_ID,S3,B1,classification,accuracy,0.9883333333333333,600
+full,validation,Scenario_ID,S3,B1,classification,macro_f1,0.9883318168281461,600
+full,validation,Scenario_ID,S3,B1,classification,end_to_end_accuracy,0.9883333333333333,600
+full,validation,Scenario_ID,S3,B1,localization,exact_bus_accuracy,0.5333333333333333,600
+full,validation,Scenario_ID,S3,B1,localization,top3_accuracy,0.95,600
+full,validation,Scenario_ID,S3,B1,localization,top5_accuracy,0.9966666666666667,600
+full,validation,Scenario_ID,S3,B1,localization,end_to_end_exact_bus_accuracy,0.5333333333333333,600
+full,validation,Scenario_ID,S3,B1,localization,mean_branch_hops,0.59,600
+full,validation,Scenario_ID,S3,B1,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S3,LightGBM,detection,accuracy,1.0,601
+full,validation,Scenario_ID,S3,LightGBM,detection,precision,1.0,601
+full,validation,Scenario_ID,S3,LightGBM,detection,recall,1.0,601
+full,validation,Scenario_ID,S3,LightGBM,detection,f1,1.0,601
+full,validation,Scenario_ID,S3,LightGBM,detection,false_positive_rate,0.0,1
+full,validation,Scenario_ID,S3,LightGBM,detection,FPR_95_lower,0.0,1
+full,validation,Scenario_ID,S3,LightGBM,detection,FPR_95_upper,0.975,1
+full,validation,Scenario_ID,S3,LightGBM,detection,recall_at_1pct_FPR,,1
+full,validation,Scenario_ID,S3,LightGBM,classification,accuracy,0.995,600
+full,validation,Scenario_ID,S3,LightGBM,classification,macro_f1,0.9949996527536635,600
+full,validation,Scenario_ID,S3,LightGBM,classification,end_to_end_accuracy,0.995,600
+full,validation,Scenario_ID,S3,LightGBM,localization,exact_bus_accuracy,0.8083333333333333,600
+full,validation,Scenario_ID,S3,LightGBM,localization,top3_accuracy,0.985,600
+full,validation,Scenario_ID,S3,LightGBM,localization,top5_accuracy,0.9933333333333333,600
+full,validation,Scenario_ID,S3,LightGBM,localization,end_to_end_exact_bus_accuracy,0.8083333333333333,600
+full,validation,Scenario_ID,S3,LightGBM,localization,mean_branch_hops,0.31,600
+full,validation,Scenario_ID,S3,LightGBM,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S4,B0,detection,accuracy,0.675,600
+full,validation,Scenario_ID,S4,B0,detection,precision,1.0,600
+full,validation,Scenario_ID,S4,B0,detection,recall,0.675,600
+full,validation,Scenario_ID,S4,B0,detection,f1,0.8059701492537313,600
+full,validation,Scenario_ID,S4,B0,detection,false_positive_rate,,0
+full,validation,Scenario_ID,S4,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Scenario_ID,S4,B0,classification,accuracy,,600
+full,validation,Scenario_ID,S4,B0,classification,macro_f1,,600
+full,validation,Scenario_ID,S4,B0,localization,exact_bus_accuracy,,600
+full,validation,Scenario_ID,S4,B0,localization,top3_accuracy,,600
+full,validation,Scenario_ID,S4,B0,localization,top5_accuracy,,600
+full,validation,Scenario_ID,S4,B0,localization,mean_branch_hops,,600
+full,validation,Scenario_ID,S4,B1,detection,accuracy,1.0,600
+full,validation,Scenario_ID,S4,B1,detection,precision,1.0,600
+full,validation,Scenario_ID,S4,B1,detection,recall,1.0,600
+full,validation,Scenario_ID,S4,B1,detection,f1,1.0,600
+full,validation,Scenario_ID,S4,B1,detection,false_positive_rate,,0
+full,validation,Scenario_ID,S4,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Scenario_ID,S4,B1,classification,accuracy,0.9816666666666667,600
+full,validation,Scenario_ID,S4,B1,classification,macro_f1,0.981658788024536,600
+full,validation,Scenario_ID,S4,B1,classification,end_to_end_accuracy,0.9816666666666667,600
+full,validation,Scenario_ID,S4,B1,localization,exact_bus_accuracy,0.5683333333333334,600
+full,validation,Scenario_ID,S4,B1,localization,top3_accuracy,0.9783333333333334,600
+full,validation,Scenario_ID,S4,B1,localization,top5_accuracy,1.0,600
+full,validation,Scenario_ID,S4,B1,localization,end_to_end_exact_bus_accuracy,0.5683333333333334,600
+full,validation,Scenario_ID,S4,B1,localization,mean_branch_hops,0.5366666666666666,600
+full,validation,Scenario_ID,S4,B1,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S4,LightGBM,detection,accuracy,1.0,600
+full,validation,Scenario_ID,S4,LightGBM,detection,precision,1.0,600
+full,validation,Scenario_ID,S4,LightGBM,detection,recall,1.0,600
+full,validation,Scenario_ID,S4,LightGBM,detection,f1,1.0,600
+full,validation,Scenario_ID,S4,LightGBM,detection,false_positive_rate,,0
+full,validation,Scenario_ID,S4,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Scenario_ID,S4,LightGBM,classification,accuracy,0.9966666666666667,600
+full,validation,Scenario_ID,S4,LightGBM,classification,macro_f1,0.996666435169109,600
+full,validation,Scenario_ID,S4,LightGBM,classification,end_to_end_accuracy,0.9966666666666667,600
+full,validation,Scenario_ID,S4,LightGBM,localization,exact_bus_accuracy,0.7783333333333333,600
+full,validation,Scenario_ID,S4,LightGBM,localization,top3_accuracy,0.9833333333333333,600
+full,validation,Scenario_ID,S4,LightGBM,localization,top5_accuracy,0.9933333333333333,600
+full,validation,Scenario_ID,S4,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7783333333333333,600
+full,validation,Scenario_ID,S4,LightGBM,localization,mean_branch_hops,0.36333333333333334,600
+full,validation,Scenario_ID,S4,LightGBM,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S5,B0,detection,accuracy,0.653910149750416,601
+full,validation,Scenario_ID,S5,B0,detection,precision,1.0,601
+full,validation,Scenario_ID,S5,B0,detection,recall,0.6533333333333333,601
+full,validation,Scenario_ID,S5,B0,detection,f1,0.7903225806451613,601
+full,validation,Scenario_ID,S5,B0,detection,false_positive_rate,0.0,1
+full,validation,Scenario_ID,S5,B0,detection,FPR_95_lower,0.0,1
+full,validation,Scenario_ID,S5,B0,detection,FPR_95_upper,0.975,1
+full,validation,Scenario_ID,S5,B0,detection,recall_at_1pct_FPR,,1
+full,validation,Scenario_ID,S5,B0,classification,accuracy,,600
+full,validation,Scenario_ID,S5,B0,classification,macro_f1,,600
+full,validation,Scenario_ID,S5,B0,localization,exact_bus_accuracy,,600
+full,validation,Scenario_ID,S5,B0,localization,top3_accuracy,,600
+full,validation,Scenario_ID,S5,B0,localization,top5_accuracy,,600
+full,validation,Scenario_ID,S5,B0,localization,mean_branch_hops,,600
+full,validation,Scenario_ID,S5,B1,detection,accuracy,1.0,601
+full,validation,Scenario_ID,S5,B1,detection,precision,1.0,601
+full,validation,Scenario_ID,S5,B1,detection,recall,1.0,601
+full,validation,Scenario_ID,S5,B1,detection,f1,1.0,601
+full,validation,Scenario_ID,S5,B1,detection,false_positive_rate,0.0,1
+full,validation,Scenario_ID,S5,B1,detection,FPR_95_lower,0.0,1
+full,validation,Scenario_ID,S5,B1,detection,FPR_95_upper,0.975,1
+full,validation,Scenario_ID,S5,B1,detection,recall_at_1pct_FPR,,1
+full,validation,Scenario_ID,S5,B1,classification,accuracy,0.9916666666666667,600
+full,validation,Scenario_ID,S5,B1,classification,macro_f1,0.9916657463689988,600
+full,validation,Scenario_ID,S5,B1,classification,end_to_end_accuracy,0.9916666666666667,600
+full,validation,Scenario_ID,S5,B1,localization,exact_bus_accuracy,0.5633333333333334,600
+full,validation,Scenario_ID,S5,B1,localization,top3_accuracy,0.95,600
+full,validation,Scenario_ID,S5,B1,localization,top5_accuracy,0.995,600
+full,validation,Scenario_ID,S5,B1,localization,end_to_end_exact_bus_accuracy,0.5633333333333334,600
+full,validation,Scenario_ID,S5,B1,localization,mean_branch_hops,0.5533333333333333,600
+full,validation,Scenario_ID,S5,B1,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S5,LightGBM,detection,accuracy,1.0,601
+full,validation,Scenario_ID,S5,LightGBM,detection,precision,1.0,601
+full,validation,Scenario_ID,S5,LightGBM,detection,recall,1.0,601
+full,validation,Scenario_ID,S5,LightGBM,detection,f1,1.0,601
+full,validation,Scenario_ID,S5,LightGBM,detection,false_positive_rate,0.0,1
+full,validation,Scenario_ID,S5,LightGBM,detection,FPR_95_lower,0.0,1
+full,validation,Scenario_ID,S5,LightGBM,detection,FPR_95_upper,0.975,1
+full,validation,Scenario_ID,S5,LightGBM,detection,recall_at_1pct_FPR,,1
+full,validation,Scenario_ID,S5,LightGBM,classification,accuracy,1.0,600
+full,validation,Scenario_ID,S5,LightGBM,classification,macro_f1,1.0,600
+full,validation,Scenario_ID,S5,LightGBM,classification,end_to_end_accuracy,1.0,600
+full,validation,Scenario_ID,S5,LightGBM,localization,exact_bus_accuracy,0.8,600
+full,validation,Scenario_ID,S5,LightGBM,localization,top3_accuracy,0.9883333333333333,600
+full,validation,Scenario_ID,S5,LightGBM,localization,top5_accuracy,0.9916666666666667,600
+full,validation,Scenario_ID,S5,LightGBM,localization,end_to_end_exact_bus_accuracy,0.8,600
+full,validation,Scenario_ID,S5,LightGBM,localization,mean_branch_hops,0.35,600
+full,validation,Scenario_ID,S5,LightGBM,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S6,B0,detection,accuracy,0.6877076411960132,602
+full,validation,Scenario_ID,S6,B0,detection,precision,1.0,602
+full,validation,Scenario_ID,S6,B0,detection,recall,0.6866666666666666,602
+full,validation,Scenario_ID,S6,B0,detection,f1,0.8142292490118577,602
+full,validation,Scenario_ID,S6,B0,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S6,B0,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S6,B0,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S6,B0,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S6,B0,classification,accuracy,,600
+full,validation,Scenario_ID,S6,B0,classification,macro_f1,,600
+full,validation,Scenario_ID,S6,B0,localization,exact_bus_accuracy,,600
+full,validation,Scenario_ID,S6,B0,localization,top3_accuracy,,600
+full,validation,Scenario_ID,S6,B0,localization,top5_accuracy,,600
+full,validation,Scenario_ID,S6,B0,localization,mean_branch_hops,,600
+full,validation,Scenario_ID,S6,B1,detection,accuracy,1.0,602
+full,validation,Scenario_ID,S6,B1,detection,precision,1.0,602
+full,validation,Scenario_ID,S6,B1,detection,recall,1.0,602
+full,validation,Scenario_ID,S6,B1,detection,f1,1.0,602
+full,validation,Scenario_ID,S6,B1,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S6,B1,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S6,B1,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S6,B1,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S6,B1,classification,accuracy,0.9983333333333333,600
+full,validation,Scenario_ID,S6,B1,classification,macro_f1,0.9983332175845545,600
+full,validation,Scenario_ID,S6,B1,classification,end_to_end_accuracy,0.9983333333333333,600
+full,validation,Scenario_ID,S6,B1,localization,exact_bus_accuracy,0.5716666666666667,600
+full,validation,Scenario_ID,S6,B1,localization,top3_accuracy,0.9516666666666667,600
+full,validation,Scenario_ID,S6,B1,localization,top5_accuracy,0.995,600
+full,validation,Scenario_ID,S6,B1,localization,end_to_end_exact_bus_accuracy,0.5716666666666667,600
+full,validation,Scenario_ID,S6,B1,localization,mean_branch_hops,0.53,600
+full,validation,Scenario_ID,S6,B1,localization,median_branch_hops,0.0,600
+full,validation,Scenario_ID,S6,LightGBM,detection,accuracy,1.0,602
+full,validation,Scenario_ID,S6,LightGBM,detection,precision,1.0,602
+full,validation,Scenario_ID,S6,LightGBM,detection,recall,1.0,602
+full,validation,Scenario_ID,S6,LightGBM,detection,f1,1.0,602
+full,validation,Scenario_ID,S6,LightGBM,detection,false_positive_rate,0.0,2
+full,validation,Scenario_ID,S6,LightGBM,detection,FPR_95_lower,0.0,2
+full,validation,Scenario_ID,S6,LightGBM,detection,FPR_95_upper,0.841886116991581,2
+full,validation,Scenario_ID,S6,LightGBM,detection,recall_at_1pct_FPR,,2
+full,validation,Scenario_ID,S6,LightGBM,classification,accuracy,0.9983333333333333,600
+full,validation,Scenario_ID,S6,LightGBM,classification,macro_f1,0.9983332175845545,600
+full,validation,Scenario_ID,S6,LightGBM,classification,end_to_end_accuracy,0.9983333333333333,600
+full,validation,Scenario_ID,S6,LightGBM,localization,exact_bus_accuracy,0.7983333333333333,600
+full,validation,Scenario_ID,S6,LightGBM,localization,top3_accuracy,0.9866666666666667,600
+full,validation,Scenario_ID,S6,LightGBM,localization,top5_accuracy,0.9916666666666667,600
+full,validation,Scenario_ID,S6,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7983333333333333,600
+full,validation,Scenario_ID,S6,LightGBM,localization,mean_branch_hops,0.35833333333333334,600
+full,validation,Scenario_ID,S6,LightGBM,localization,median_branch_hops,0.0,600
+full,validation,Fault_Type,LGA,B0,detection,accuracy,0.6972222222222222,360
+full,validation,Fault_Type,LGA,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LGA,B0,detection,recall,0.6972222222222222,360
+full,validation,Fault_Type,LGA,B0,detection,f1,0.8216039279869067,360
+full,validation,Fault_Type,LGA,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGA,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGA,B0,classification,accuracy,,360
+full,validation,Fault_Type,LGA,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LGA,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LGA,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LGA,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LGA,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LGA,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LGA,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LGA,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LGA,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LGA,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGA,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGA,B1,classification,accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LGA,B1,classification,macro_f1,0.09986091794158554,360
+full,validation,Fault_Type,LGA,B1,classification,end_to_end_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LGA,B1,localization,exact_bus_accuracy,0.5666666666666667,360
+full,validation,Fault_Type,LGA,B1,localization,top3_accuracy,0.95,360
+full,validation,Fault_Type,LGA,B1,localization,top5_accuracy,0.9861111111111112,360
+full,validation,Fault_Type,LGA,B1,localization,end_to_end_exact_bus_accuracy,0.5666666666666667,360
+full,validation,Fault_Type,LGA,B1,localization,mean_branch_hops,0.5361111111111111,360
+full,validation,Fault_Type,LGA,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LGA,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LGA,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LGA,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LGA,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LGA,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGA,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGA,LightGBM,classification,accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LGA,LightGBM,classification,macro_f1,0.09986091794158554,360
+full,validation,Fault_Type,LGA,LightGBM,classification,end_to_end_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LGA,LightGBM,localization,exact_bus_accuracy,0.8055555555555556,360
+full,validation,Fault_Type,LGA,LightGBM,localization,top3_accuracy,0.9861111111111112,360
+full,validation,Fault_Type,LGA,LightGBM,localization,top5_accuracy,0.9916666666666667,360
+full,validation,Fault_Type,LGA,LightGBM,localization,end_to_end_exact_bus_accuracy,0.8055555555555556,360
+full,validation,Fault_Type,LGA,LightGBM,localization,mean_branch_hops,0.3416666666666667,360
+full,validation,Fault_Type,LGA,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LGB,B0,detection,accuracy,0.6722222222222223,360
+full,validation,Fault_Type,LGB,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LGB,B0,detection,recall,0.6722222222222223,360
+full,validation,Fault_Type,LGB,B0,detection,f1,0.8039867109634552,360
+full,validation,Fault_Type,LGB,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGB,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGB,B0,classification,accuracy,,360
+full,validation,Fault_Type,LGB,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LGB,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LGB,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LGB,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LGB,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LGB,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LGB,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LGB,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LGB,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LGB,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGB,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGB,B1,classification,accuracy,0.9888888888888889,360
+full,validation,Fault_Type,LGB,B1,classification,macro_f1,0.0994413407821229,360
+full,validation,Fault_Type,LGB,B1,classification,end_to_end_accuracy,0.9888888888888889,360
+full,validation,Fault_Type,LGB,B1,localization,exact_bus_accuracy,0.5222222222222223,360
+full,validation,Fault_Type,LGB,B1,localization,top3_accuracy,0.9666666666666667,360
+full,validation,Fault_Type,LGB,B1,localization,top5_accuracy,1.0,360
+full,validation,Fault_Type,LGB,B1,localization,end_to_end_exact_bus_accuracy,0.5222222222222223,360
+full,validation,Fault_Type,LGB,B1,localization,mean_branch_hops,0.6083333333333333,360
+full,validation,Fault_Type,LGB,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LGB,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LGB,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LGB,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LGB,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LGB,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGB,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGB,LightGBM,classification,accuracy,1.0,360
+full,validation,Fault_Type,LGB,LightGBM,classification,macro_f1,0.1,360
+full,validation,Fault_Type,LGB,LightGBM,classification,end_to_end_accuracy,1.0,360
+full,validation,Fault_Type,LGB,LightGBM,localization,exact_bus_accuracy,0.8083333333333333,360
+full,validation,Fault_Type,LGB,LightGBM,localization,top3_accuracy,0.9916666666666667,360
+full,validation,Fault_Type,LGB,LightGBM,localization,top5_accuracy,1.0,360
+full,validation,Fault_Type,LGB,LightGBM,localization,end_to_end_exact_bus_accuracy,0.8083333333333333,360
+full,validation,Fault_Type,LGB,LightGBM,localization,mean_branch_hops,0.3611111111111111,360
+full,validation,Fault_Type,LGB,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LGC,B0,detection,accuracy,0.6527777777777778,360
+full,validation,Fault_Type,LGC,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LGC,B0,detection,recall,0.6527777777777778,360
+full,validation,Fault_Type,LGC,B0,detection,f1,0.7899159663865546,360
+full,validation,Fault_Type,LGC,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGC,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGC,B0,classification,accuracy,,360
+full,validation,Fault_Type,LGC,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LGC,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LGC,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LGC,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LGC,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LGC,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LGC,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LGC,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LGC,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LGC,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGC,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGC,B1,classification,accuracy,1.0,360
+full,validation,Fault_Type,LGC,B1,classification,macro_f1,0.1,360
+full,validation,Fault_Type,LGC,B1,classification,end_to_end_accuracy,1.0,360
+full,validation,Fault_Type,LGC,B1,localization,exact_bus_accuracy,0.5111111111111111,360
+full,validation,Fault_Type,LGC,B1,localization,top3_accuracy,0.9611111111111111,360
+full,validation,Fault_Type,LGC,B1,localization,top5_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LGC,B1,localization,end_to_end_exact_bus_accuracy,0.5111111111111111,360
+full,validation,Fault_Type,LGC,B1,localization,mean_branch_hops,0.5972222222222222,360
+full,validation,Fault_Type,LGC,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LGC,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LGC,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LGC,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LGC,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LGC,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LGC,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LGC,LightGBM,classification,accuracy,0.9944444444444445,360
+full,validation,Fault_Type,LGC,LightGBM,classification,macro_f1,0.09972144846796657,360
+full,validation,Fault_Type,LGC,LightGBM,classification,end_to_end_accuracy,0.9944444444444445,360
+full,validation,Fault_Type,LGC,LightGBM,localization,exact_bus_accuracy,0.7777777777777778,360
+full,validation,Fault_Type,LGC,LightGBM,localization,top3_accuracy,0.975,360
+full,validation,Fault_Type,LGC,LightGBM,localization,top5_accuracy,0.9805555555555555,360
+full,validation,Fault_Type,LGC,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7777777777777778,360
+full,validation,Fault_Type,LGC,LightGBM,localization,mean_branch_hops,0.43333333333333335,360
+full,validation,Fault_Type,LGC,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLAB,B0,detection,accuracy,0.6916666666666667,360
+full,validation,Fault_Type,LLAB,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LLAB,B0,detection,recall,0.6916666666666667,360
+full,validation,Fault_Type,LLAB,B0,detection,f1,0.8177339901477833,360
+full,validation,Fault_Type,LLAB,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLAB,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLAB,B0,classification,accuracy,,360
+full,validation,Fault_Type,LLAB,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LLAB,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LLAB,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LLAB,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LLAB,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LLAB,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLAB,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LLAB,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LLAB,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LLAB,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLAB,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLAB,B1,classification,accuracy,0.9833333333333333,360
+full,validation,Fault_Type,LLAB,B1,classification,macro_f1,0.09915966386554623,360
+full,validation,Fault_Type,LLAB,B1,classification,end_to_end_accuracy,0.9833333333333333,360
+full,validation,Fault_Type,LLAB,B1,localization,exact_bus_accuracy,0.6027777777777777,360
+full,validation,Fault_Type,LLAB,B1,localization,top3_accuracy,0.9527777777777777,360
+full,validation,Fault_Type,LLAB,B1,localization,top5_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLAB,B1,localization,end_to_end_exact_bus_accuracy,0.6027777777777777,360
+full,validation,Fault_Type,LLAB,B1,localization,mean_branch_hops,0.5222222222222223,360
+full,validation,Fault_Type,LLAB,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLAB,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLAB,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LLAB,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LLAB,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LLAB,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLAB,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLAB,LightGBM,classification,accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLAB,LightGBM,classification,macro_f1,0.09986091794158554,360
+full,validation,Fault_Type,LLAB,LightGBM,classification,end_to_end_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLAB,LightGBM,localization,exact_bus_accuracy,0.7805555555555556,360
+full,validation,Fault_Type,LLAB,LightGBM,localization,top3_accuracy,0.9888888888888889,360
+full,validation,Fault_Type,LLAB,LightGBM,localization,top5_accuracy,0.9944444444444445,360
+full,validation,Fault_Type,LLAB,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7805555555555556,360
+full,validation,Fault_Type,LLAB,LightGBM,localization,mean_branch_hops,0.35555555555555557,360
+full,validation,Fault_Type,LLAB,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLABG,B0,detection,accuracy,0.6694444444444444,360
+full,validation,Fault_Type,LLABG,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LLABG,B0,detection,recall,0.6694444444444444,360
+full,validation,Fault_Type,LLABG,B0,detection,f1,0.8019966722129783,360
+full,validation,Fault_Type,LLABG,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLABG,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLABG,B0,classification,accuracy,,360
+full,validation,Fault_Type,LLABG,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LLABG,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LLABG,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LLABG,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LLABG,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LLABG,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLABG,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LLABG,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LLABG,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LLABG,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLABG,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLABG,B1,classification,accuracy,0.9916666666666667,360
+full,validation,Fault_Type,LLABG,B1,classification,macro_f1,0.099581589958159,360
+full,validation,Fault_Type,LLABG,B1,classification,end_to_end_accuracy,0.9916666666666667,360
+full,validation,Fault_Type,LLABG,B1,localization,exact_bus_accuracy,0.525,360
+full,validation,Fault_Type,LLABG,B1,localization,top3_accuracy,0.9666666666666667,360
+full,validation,Fault_Type,LLABG,B1,localization,top5_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLABG,B1,localization,end_to_end_exact_bus_accuracy,0.525,360
+full,validation,Fault_Type,LLABG,B1,localization,mean_branch_hops,0.575,360
+full,validation,Fault_Type,LLABG,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLABG,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLABG,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LLABG,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LLABG,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LLABG,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLABG,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLABG,LightGBM,classification,accuracy,1.0,360
+full,validation,Fault_Type,LLABG,LightGBM,classification,macro_f1,0.1,360
+full,validation,Fault_Type,LLABG,LightGBM,classification,end_to_end_accuracy,1.0,360
+full,validation,Fault_Type,LLABG,LightGBM,localization,exact_bus_accuracy,0.8166666666666667,360
+full,validation,Fault_Type,LLABG,LightGBM,localization,top3_accuracy,0.9944444444444445,360
+full,validation,Fault_Type,LLABG,LightGBM,localization,top5_accuracy,1.0,360
+full,validation,Fault_Type,LLABG,LightGBM,localization,end_to_end_exact_bus_accuracy,0.8166666666666667,360
+full,validation,Fault_Type,LLABG,LightGBM,localization,mean_branch_hops,0.34444444444444444,360
+full,validation,Fault_Type,LLABG,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLAC,B0,detection,accuracy,0.6222222222222222,360
+full,validation,Fault_Type,LLAC,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LLAC,B0,detection,recall,0.6222222222222222,360
+full,validation,Fault_Type,LLAC,B0,detection,f1,0.7671232876712328,360
+full,validation,Fault_Type,LLAC,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLAC,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLAC,B0,classification,accuracy,,360
+full,validation,Fault_Type,LLAC,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LLAC,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LLAC,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LLAC,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LLAC,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LLAC,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLAC,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LLAC,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LLAC,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LLAC,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLAC,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLAC,B1,classification,accuracy,0.975,360
+full,validation,Fault_Type,LLAC,B1,classification,macro_f1,0.09873417721518987,360
+full,validation,Fault_Type,LLAC,B1,classification,end_to_end_accuracy,0.975,360
+full,validation,Fault_Type,LLAC,B1,localization,exact_bus_accuracy,0.525,360
+full,validation,Fault_Type,LLAC,B1,localization,top3_accuracy,0.9694444444444444,360
+full,validation,Fault_Type,LLAC,B1,localization,top5_accuracy,0.9916666666666667,360
+full,validation,Fault_Type,LLAC,B1,localization,end_to_end_exact_bus_accuracy,0.525,360
+full,validation,Fault_Type,LLAC,B1,localization,mean_branch_hops,0.6,360
+full,validation,Fault_Type,LLAC,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLAC,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLAC,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LLAC,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LLAC,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LLAC,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLAC,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLAC,LightGBM,classification,accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLAC,LightGBM,classification,macro_f1,0.09986091794158554,360
+full,validation,Fault_Type,LLAC,LightGBM,classification,end_to_end_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLAC,LightGBM,localization,exact_bus_accuracy,0.8055555555555556,360
+full,validation,Fault_Type,LLAC,LightGBM,localization,top3_accuracy,0.9861111111111112,360
+full,validation,Fault_Type,LLAC,LightGBM,localization,top5_accuracy,1.0,360
+full,validation,Fault_Type,LLAC,LightGBM,localization,end_to_end_exact_bus_accuracy,0.8055555555555556,360
+full,validation,Fault_Type,LLAC,LightGBM,localization,mean_branch_hops,0.2861111111111111,360
+full,validation,Fault_Type,LLAC,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLACG,B0,detection,accuracy,0.6777777777777778,360
+full,validation,Fault_Type,LLACG,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LLACG,B0,detection,recall,0.6777777777777778,360
+full,validation,Fault_Type,LLACG,B0,detection,f1,0.8079470198675497,360
+full,validation,Fault_Type,LLACG,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLACG,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLACG,B0,classification,accuracy,,360
+full,validation,Fault_Type,LLACG,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LLACG,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LLACG,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LLACG,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LLACG,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LLACG,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLACG,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LLACG,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LLACG,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LLACG,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLACG,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLACG,B1,classification,accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLACG,B1,classification,macro_f1,0.09986091794158554,360
+full,validation,Fault_Type,LLACG,B1,classification,end_to_end_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLACG,B1,localization,exact_bus_accuracy,0.5777777777777777,360
+full,validation,Fault_Type,LLACG,B1,localization,top3_accuracy,0.9694444444444444,360
+full,validation,Fault_Type,LLACG,B1,localization,top5_accuracy,0.9916666666666667,360
+full,validation,Fault_Type,LLACG,B1,localization,end_to_end_exact_bus_accuracy,0.5777777777777777,360
+full,validation,Fault_Type,LLACG,B1,localization,mean_branch_hops,0.4861111111111111,360
+full,validation,Fault_Type,LLACG,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLACG,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLACG,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LLACG,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LLACG,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LLACG,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLACG,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLACG,LightGBM,classification,accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLACG,LightGBM,classification,macro_f1,0.09986091794158554,360
+full,validation,Fault_Type,LLACG,LightGBM,classification,end_to_end_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLACG,LightGBM,localization,exact_bus_accuracy,0.7888888888888889,360
+full,validation,Fault_Type,LLACG,LightGBM,localization,top3_accuracy,0.975,360
+full,validation,Fault_Type,LLACG,LightGBM,localization,top5_accuracy,0.9861111111111112,360
+full,validation,Fault_Type,LLACG,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7888888888888889,360
+full,validation,Fault_Type,LLACG,LightGBM,localization,mean_branch_hops,0.2638888888888889,360
+full,validation,Fault_Type,LLACG,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLBC,B0,detection,accuracy,0.6666666666666666,360
+full,validation,Fault_Type,LLBC,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LLBC,B0,detection,recall,0.6666666666666666,360
+full,validation,Fault_Type,LLBC,B0,detection,f1,0.8,360
+full,validation,Fault_Type,LLBC,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLBC,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLBC,B0,classification,accuracy,,360
+full,validation,Fault_Type,LLBC,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LLBC,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LLBC,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LLBC,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LLBC,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LLBC,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLBC,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LLBC,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LLBC,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LLBC,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLBC,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLBC,B1,classification,accuracy,0.9861111111111112,360
+full,validation,Fault_Type,LLBC,B1,classification,macro_f1,0.0993006993006993,360
+full,validation,Fault_Type,LLBC,B1,classification,end_to_end_accuracy,0.9861111111111112,360
+full,validation,Fault_Type,LLBC,B1,localization,exact_bus_accuracy,0.55,360
+full,validation,Fault_Type,LLBC,B1,localization,top3_accuracy,0.9361111111111111,360
+full,validation,Fault_Type,LLBC,B1,localization,top5_accuracy,0.9944444444444445,360
+full,validation,Fault_Type,LLBC,B1,localization,end_to_end_exact_bus_accuracy,0.55,360
+full,validation,Fault_Type,LLBC,B1,localization,mean_branch_hops,0.5861111111111111,360
+full,validation,Fault_Type,LLBC,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLBC,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLBC,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LLBC,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LLBC,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LLBC,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLBC,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLBC,LightGBM,classification,accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLBC,LightGBM,classification,macro_f1,0.09986091794158554,360
+full,validation,Fault_Type,LLBC,LightGBM,classification,end_to_end_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLBC,LightGBM,localization,exact_bus_accuracy,0.7777777777777778,360
+full,validation,Fault_Type,LLBC,LightGBM,localization,top3_accuracy,0.9888888888888889,360
+full,validation,Fault_Type,LLBC,LightGBM,localization,top5_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLBC,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7777777777777778,360
+full,validation,Fault_Type,LLBC,LightGBM,localization,mean_branch_hops,0.38333333333333336,360
+full,validation,Fault_Type,LLBC,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLBCG,B0,detection,accuracy,0.675,360
+full,validation,Fault_Type,LLBCG,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LLBCG,B0,detection,recall,0.675,360
+full,validation,Fault_Type,LLBCG,B0,detection,f1,0.8059701492537313,360
+full,validation,Fault_Type,LLBCG,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLBCG,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLBCG,B0,classification,accuracy,,360
+full,validation,Fault_Type,LLBCG,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LLBCG,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LLBCG,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LLBCG,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LLBCG,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LLBCG,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLBCG,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LLBCG,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LLBCG,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LLBCG,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLBCG,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLBCG,B1,classification,accuracy,0.9888888888888889,360
+full,validation,Fault_Type,LLBCG,B1,classification,macro_f1,0.0994413407821229,360
+full,validation,Fault_Type,LLBCG,B1,classification,end_to_end_accuracy,0.9888888888888889,360
+full,validation,Fault_Type,LLBCG,B1,localization,exact_bus_accuracy,0.5472222222222223,360
+full,validation,Fault_Type,LLBCG,B1,localization,top3_accuracy,0.9444444444444444,360
+full,validation,Fault_Type,LLBCG,B1,localization,top5_accuracy,0.9916666666666667,360
+full,validation,Fault_Type,LLBCG,B1,localization,end_to_end_exact_bus_accuracy,0.5472222222222223,360
+full,validation,Fault_Type,LLBCG,B1,localization,mean_branch_hops,0.5416666666666666,360
+full,validation,Fault_Type,LLBCG,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLBCG,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLBCG,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LLBCG,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LLBCG,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LLBCG,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLBCG,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLBCG,LightGBM,classification,accuracy,0.9944444444444445,360
+full,validation,Fault_Type,LLBCG,LightGBM,classification,macro_f1,0.09972144846796657,360
+full,validation,Fault_Type,LLBCG,LightGBM,classification,end_to_end_accuracy,0.9944444444444445,360
+full,validation,Fault_Type,LLBCG,LightGBM,localization,exact_bus_accuracy,0.8472222222222222,360
+full,validation,Fault_Type,LLBCG,LightGBM,localization,top3_accuracy,0.9972222222222222,360
+full,validation,Fault_Type,LLBCG,LightGBM,localization,top5_accuracy,1.0,360
+full,validation,Fault_Type,LLBCG,LightGBM,localization,end_to_end_exact_bus_accuracy,0.8472222222222222,360
+full,validation,Fault_Type,LLBCG,LightGBM,localization,mean_branch_hops,0.24722222222222223,360
+full,validation,Fault_Type,LLBCG,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLLG,B0,detection,accuracy,0.6361111111111111,360
+full,validation,Fault_Type,LLLG,B0,detection,precision,1.0,360
+full,validation,Fault_Type,LLLG,B0,detection,recall,0.6361111111111111,360
+full,validation,Fault_Type,LLLG,B0,detection,f1,0.7775891341256367,360
+full,validation,Fault_Type,LLLG,B0,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLLG,B0,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLLG,B0,classification,accuracy,,360
+full,validation,Fault_Type,LLLG,B0,classification,macro_f1,,360
+full,validation,Fault_Type,LLLG,B0,localization,exact_bus_accuracy,,360
+full,validation,Fault_Type,LLLG,B0,localization,top3_accuracy,,360
+full,validation,Fault_Type,LLLG,B0,localization,top5_accuracy,,360
+full,validation,Fault_Type,LLLG,B0,localization,mean_branch_hops,,360
+full,validation,Fault_Type,LLLG,B1,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLLG,B1,detection,precision,1.0,360
+full,validation,Fault_Type,LLLG,B1,detection,recall,1.0,360
+full,validation,Fault_Type,LLLG,B1,detection,f1,1.0,360
+full,validation,Fault_Type,LLLG,B1,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLLG,B1,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLLG,B1,classification,accuracy,1.0,360
+full,validation,Fault_Type,LLLG,B1,classification,macro_f1,0.1,360
+full,validation,Fault_Type,LLLG,B1,classification,end_to_end_accuracy,1.0,360
+full,validation,Fault_Type,LLLG,B1,localization,exact_bus_accuracy,0.55,360
+full,validation,Fault_Type,LLLG,B1,localization,top3_accuracy,0.9555555555555556,360
+full,validation,Fault_Type,LLLG,B1,localization,top5_accuracy,1.0,360
+full,validation,Fault_Type,LLLG,B1,localization,end_to_end_exact_bus_accuracy,0.55,360
+full,validation,Fault_Type,LLLG,B1,localization,mean_branch_hops,0.5833333333333334,360
+full,validation,Fault_Type,LLLG,B1,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,LLLG,LightGBM,detection,accuracy,1.0,360
+full,validation,Fault_Type,LLLG,LightGBM,detection,precision,1.0,360
+full,validation,Fault_Type,LLLG,LightGBM,detection,recall,1.0,360
+full,validation,Fault_Type,LLLG,LightGBM,detection,f1,1.0,360
+full,validation,Fault_Type,LLLG,LightGBM,detection,false_positive_rate,,0
+full,validation,Fault_Type,LLLG,LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,Fault_Type,LLLG,LightGBM,classification,accuracy,1.0,360
+full,validation,Fault_Type,LLLG,LightGBM,classification,macro_f1,0.1,360
+full,validation,Fault_Type,LLLG,LightGBM,classification,end_to_end_accuracy,1.0,360
+full,validation,Fault_Type,LLLG,LightGBM,localization,exact_bus_accuracy,0.7611111111111111,360
+full,validation,Fault_Type,LLLG,LightGBM,localization,top3_accuracy,0.975,360
+full,validation,Fault_Type,LLLG,LightGBM,localization,top5_accuracy,0.9833333333333333,360
+full,validation,Fault_Type,LLLG,LightGBM,localization,end_to_end_exact_bus_accuracy,0.7611111111111111,360
+full,validation,Fault_Type,LLLG,LightGBM,localization,mean_branch_hops,0.4638888888888889,360
+full,validation,Fault_Type,LLLG,LightGBM,localization,median_branch_hops,0.0,360
+full,validation,Fault_Type,Normal,B0,detection,accuracy,1.0,8
+full,validation,Fault_Type,Normal,B0,detection,precision,0.0,8
+full,validation,Fault_Type,Normal,B0,detection,recall,0.0,8
+full,validation,Fault_Type,Normal,B0,detection,f1,0.0,8
+full,validation,Fault_Type,Normal,B0,detection,false_positive_rate,0.0,8
+full,validation,Fault_Type,Normal,B0,detection,FPR_95_lower,0.0,8
+full,validation,Fault_Type,Normal,B0,detection,FPR_95_upper,0.3694166475528192,8
+full,validation,Fault_Type,Normal,B0,detection,recall_at_1pct_FPR,,8
+full,validation,Fault_Type,Normal,B0,classification,accuracy,,0
+full,validation,Fault_Type,Normal,B0,classification,macro_f1,,0
+full,validation,Fault_Type,Normal,B0,localization,exact_bus_accuracy,,0
+full,validation,Fault_Type,Normal,B0,localization,top3_accuracy,,0
+full,validation,Fault_Type,Normal,B0,localization,top5_accuracy,,0
+full,validation,Fault_Type,Normal,B0,localization,mean_branch_hops,,0
+full,validation,Fault_Type,Normal,B1,detection,accuracy,1.0,8
+full,validation,Fault_Type,Normal,B1,detection,precision,0.0,8
+full,validation,Fault_Type,Normal,B1,detection,recall,0.0,8
+full,validation,Fault_Type,Normal,B1,detection,f1,0.0,8
+full,validation,Fault_Type,Normal,B1,detection,false_positive_rate,0.0,8
+full,validation,Fault_Type,Normal,B1,detection,FPR_95_lower,0.0,8
+full,validation,Fault_Type,Normal,B1,detection,FPR_95_upper,0.3694166475528192,8
+full,validation,Fault_Type,Normal,B1,detection,recall_at_1pct_FPR,,8
+full,validation,Fault_Type,Normal,LightGBM,detection,accuracy,1.0,8
+full,validation,Fault_Type,Normal,LightGBM,detection,precision,0.0,8
+full,validation,Fault_Type,Normal,LightGBM,detection,recall,0.0,8
+full,validation,Fault_Type,Normal,LightGBM,detection,f1,0.0,8
+full,validation,Fault_Type,Normal,LightGBM,detection,false_positive_rate,0.0,8
+full,validation,Fault_Type,Normal,LightGBM,detection,FPR_95_lower,0.0,8
+full,validation,Fault_Type,Normal,LightGBM,detection,FPR_95_upper,0.3694166475528192,8
+full,validation,Fault_Type,Normal,LightGBM,detection,recall_at_1pct_FPR,,8
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,detection,accuracy,0.6474820143884892,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,detection,precision,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,detection,recall,0.6474820143884892,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,detection,f1,0.7860262008733624,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,classification,accuracy,,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,classification,macro_f1,,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,localization,exact_bus_accuracy,,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,localization,top3_accuracy,,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,localization,top5_accuracy,,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B0,localization,mean_branch_hops,,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,detection,accuracy,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,detection,precision,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,detection,recall,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,detection,f1,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,classification,accuracy,0.9712230215827338,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,classification,macro_f1,0.9704049562520327,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,classification,end_to_end_accuracy,0.9712230215827338,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,localization,exact_bus_accuracy,0.5107913669064749,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,localization,top3_accuracy,0.920863309352518,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,localization,top5_accuracy,0.9784172661870504,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,localization,end_to_end_exact_bus_accuracy,0.5107913669064749,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,localization,mean_branch_hops,0.6402877697841727,139
+full,validation,resistance_bin,"(-0.001, 1.0]",B1,localization,median_branch_hops,0.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,detection,accuracy,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,detection,precision,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,detection,recall,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,detection,f1,1.0,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,classification,accuracy,0.9784172661870504,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,classification,macro_f1,0.9769099136841074,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,classification,end_to_end_accuracy,0.9784172661870504,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,localization,exact_bus_accuracy,0.6762589928057554,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,localization,top3_accuracy,0.8992805755395683,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,localization,top5_accuracy,0.9280575539568345,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,localization,end_to_end_exact_bus_accuracy,0.6762589928057554,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,localization,mean_branch_hops,0.5539568345323741,139
+full,validation,resistance_bin,"(-0.001, 1.0]",LightGBM,localization,median_branch_hops,0.0,139
+full,validation,resistance_bin,"(1.0, 5.0]",B0,detection,accuracy,0.6666666666666666,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,detection,precision,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,detection,recall,0.6666666666666666,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,detection,f1,0.8,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(1.0, 5.0]",B0,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(1.0, 5.0]",B0,classification,accuracy,,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,classification,macro_f1,,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,localization,exact_bus_accuracy,,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,localization,top3_accuracy,,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,localization,top5_accuracy,,582
+full,validation,resistance_bin,"(1.0, 5.0]",B0,localization,mean_branch_hops,,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,detection,accuracy,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,detection,precision,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,detection,recall,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,detection,f1,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(1.0, 5.0]",B1,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(1.0, 5.0]",B1,classification,accuracy,0.9948453608247423,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,classification,macro_f1,0.9949344375431333,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,classification,end_to_end_accuracy,0.9948453608247423,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,localization,exact_bus_accuracy,0.5567010309278351,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,localization,top3_accuracy,0.9553264604810997,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,localization,top5_accuracy,0.9965635738831615,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,localization,end_to_end_exact_bus_accuracy,0.5567010309278351,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,localization,mean_branch_hops,0.5790378006872853,582
+full,validation,resistance_bin,"(1.0, 5.0]",B1,localization,median_branch_hops,0.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,detection,accuracy,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,detection,precision,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,detection,recall,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,detection,f1,1.0,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,classification,accuracy,0.9948453608247423,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,classification,macro_f1,0.9950637332716589,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,classification,end_to_end_accuracy,0.9948453608247423,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,localization,exact_bus_accuracy,0.7542955326460481,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,localization,top3_accuracy,0.9742268041237113,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,localization,top5_accuracy,0.993127147766323,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,localization,end_to_end_exact_bus_accuracy,0.7542955326460481,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,localization,mean_branch_hops,0.4536082474226804,582
+full,validation,resistance_bin,"(1.0, 5.0]",LightGBM,localization,median_branch_hops,0.0,582
+full,validation,resistance_bin,"(10.0, 15.0]",B0,detection,accuracy,0.6567357512953368,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,detection,precision,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,detection,recall,0.6567357512953368,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,detection,f1,0.7928068803752932,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(10.0, 15.0]",B0,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(10.0, 15.0]",B0,classification,accuracy,,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,classification,macro_f1,,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,localization,exact_bus_accuracy,,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,localization,top3_accuracy,,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,localization,top5_accuracy,,772
+full,validation,resistance_bin,"(10.0, 15.0]",B0,localization,mean_branch_hops,,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,detection,accuracy,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,detection,precision,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,detection,recall,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,detection,f1,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(10.0, 15.0]",B1,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(10.0, 15.0]",B1,classification,accuracy,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,classification,macro_f1,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,classification,end_to_end_accuracy,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,localization,exact_bus_accuracy,0.5284974093264249,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,localization,top3_accuracy,0.9676165803108808,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,localization,top5_accuracy,0.9974093264248705,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,localization,end_to_end_exact_bus_accuracy,0.5284974093264249,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,localization,mean_branch_hops,0.5816062176165803,772
+full,validation,resistance_bin,"(10.0, 15.0]",B1,localization,median_branch_hops,0.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,detection,accuracy,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,detection,precision,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,detection,recall,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,detection,f1,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,classification,accuracy,0.9987046632124352,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,classification,macro_f1,0.9987096774193549,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,classification,end_to_end_accuracy,0.9987046632124352,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,localization,exact_bus_accuracy,0.7901554404145078,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,localization,top3_accuracy,0.9961139896373057,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,localization,top5_accuracy,1.0,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,localization,end_to_end_exact_bus_accuracy,0.7901554404145078,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,localization,mean_branch_hops,0.344559585492228,772
+full,validation,resistance_bin,"(10.0, 15.0]",LightGBM,localization,median_branch_hops,0.0,772
+full,validation,resistance_bin,"(15.0, 25.0]",B0,detection,accuracy,0.6845493562231759,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,detection,precision,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,detection,recall,0.6845493562231759,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,detection,f1,0.8127388535031848,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(15.0, 25.0]",B0,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(15.0, 25.0]",B0,classification,accuracy,,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,classification,macro_f1,,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,localization,exact_bus_accuracy,,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,localization,top3_accuracy,,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,localization,top5_accuracy,,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B0,localization,mean_branch_hops,,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,detection,accuracy,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,detection,precision,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,detection,recall,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,detection,f1,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(15.0, 25.0]",B1,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(15.0, 25.0]",B1,classification,accuracy,0.9842632331902719,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,classification,macro_f1,0.9842194221834157,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,classification,end_to_end_accuracy,0.9842632331902719,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,localization,exact_bus_accuracy,0.5550786838340487,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,localization,top3_accuracy,0.9549356223175965,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,localization,top5_accuracy,0.994277539341917,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,localization,end_to_end_exact_bus_accuracy,0.5550786838340487,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,localization,mean_branch_hops,0.5457796852646638,1398
+full,validation,resistance_bin,"(15.0, 25.0]",B1,localization,median_branch_hops,0.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,detection,accuracy,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,detection,precision,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,detection,recall,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,detection,f1,1.0,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,classification,accuracy,0.9985693848354793,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,classification,macro_f1,0.9985537270717257,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,classification,end_to_end_accuracy,0.9985693848354793,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,localization,exact_bus_accuracy,0.8175965665236051,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,localization,top3_accuracy,0.9892703862660944,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,localization,top5_accuracy,0.9928469241773963,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,localization,end_to_end_exact_bus_accuracy,0.8175965665236051,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,localization,mean_branch_hops,0.3218884120171674,1398
+full,validation,resistance_bin,"(15.0, 25.0]",LightGBM,localization,median_branch_hops,0.0,1398
+full,validation,resistance_bin,"(5.0, 10.0]",B0,detection,accuracy,0.6431593794076164,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,detection,precision,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,detection,recall,0.6431593794076164,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,detection,f1,0.7828326180257511,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(5.0, 10.0]",B0,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(5.0, 10.0]",B0,classification,accuracy,,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,classification,macro_f1,,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,localization,exact_bus_accuracy,,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,localization,top3_accuracy,,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,localization,top5_accuracy,,709
+full,validation,resistance_bin,"(5.0, 10.0]",B0,localization,mean_branch_hops,,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,detection,accuracy,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,detection,precision,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,detection,recall,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,detection,f1,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(5.0, 10.0]",B1,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(5.0, 10.0]",B1,classification,accuracy,0.9943582510578279,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,classification,macro_f1,0.9941219926554401,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,classification,end_to_end_accuracy,0.9943582510578279,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,localization,exact_bus_accuracy,0.5543018335684062,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,localization,top3_accuracy,0.9590973201692524,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,localization,top5_accuracy,0.9943582510578279,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,localization,end_to_end_exact_bus_accuracy,0.5543018335684062,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,localization,mean_branch_hops,0.5514809590973202,709
+full,validation,resistance_bin,"(5.0, 10.0]",B1,localization,median_branch_hops,0.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,detection,accuracy,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,detection,precision,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,detection,recall,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,detection,f1,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,detection,false_positive_rate,,0
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,detection,recall_at_1pct_FPR,,0
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,classification,accuracy,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,classification,macro_f1,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,classification,end_to_end_accuracy,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,localization,exact_bus_accuracy,0.8222849083215797,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,localization,top3_accuracy,0.9943582510578279,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,localization,top5_accuracy,1.0,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,localization,end_to_end_exact_bus_accuracy,0.8222849083215797,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,localization,mean_branch_hops,0.2764456981664316,709
+full,validation,resistance_bin,"(5.0, 10.0]",LightGBM,localization,median_branch_hops,0.0,709

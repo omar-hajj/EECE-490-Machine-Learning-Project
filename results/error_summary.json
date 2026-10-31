@@ -1,0 +1,139 @@
+[
+  {
+    "task": "classification",
+    "category": "B1_only_correct",
+    "n": 9,
+    "median_resistance_ohm": 0.811,
+    "example_sample_ids": [
+      325,
+      4526,
+      8984,
+      9345,
+      9347,
+      9349,
+      10217,
+      12366,
+      19404
+    ]
+  },
+  {
+    "task": "classification",
+    "category": "ML_only_correct",
+    "n": 46,
+    "median_resistance_ohm": 19.1245,
+    "example_sample_ids": [
+      196,
+      355,
+      1680,
+      2446,
+      2450,
+      2903,
+      3600,
+      3662,
+      4525,
+      4539
+    ]
+  },
+  {
+    "task": "classification",
+    "category": "both_wrong",
+    "n": 4,
+    "median_resistance_ohm": 4.682,
+    "example_sample_ids": [
+      5160,
+      8336,
+      9014,
+      15052
+    ]
+  },
+  {
+    "task": "classification",
+    "category": "both_correct",
+    "n": 3541,
+    "median_resistance_ohm": 12.506,
+    "example_sample_ids": [
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179
+    ]
+  },
+  {
+    "task": "localization",
+    "category": "B1_only_correct",
+    "n": 288,
+    "median_resistance_ohm": 11.952000000000002,
+    "example_sample_ids": [
+      182,
+      184,
+      196,
+      199,
+      209,
+      219,
+      281,
+      301,
+      303,
+      312
+    ]
+  },
+  {
+    "task": "localization",
+    "category": "ML_only_correct",
+    "n": 1192,
+    "median_resistance_ohm": 12.499,
+    "example_sample_ids": [
+      171,
+      176,
+      178,
+      180,
+      183,
+      188,
+      208,
+      212,
+      217,
+      282
+    ]
+  },
+  {
+    "task": "localization",
+    "category": "both_wrong",
+    "n": 435,
+    "median_resistance_ohm": 13.11,
+    "example_sample_ids": [
+      203,
+      204,
+      205,
+      211,
+      213,
+      288,
+      292,
+      297,
+      305,
+      356
+    ]
+  },
+  {
+    "task": "localization",
+    "category": "both_correct",
+    "n": 1685,
+    "median_resistance_ohm": 12.525,
+    "example_sample_ids": [
+      170,
+      172,
+      173,
+      174,
+      175,
+      177,
+      179,
+      181,
+      185,
+      186
+    ]
+  }
+]

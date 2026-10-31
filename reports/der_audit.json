@@ -1,0 +1,153 @@
+{
+  "samples": 19800,
+  "measurement_columns": 3604,
+  "metadata_columns": 16,
+  "class_counts": {
+    "Normal": 1800,
+    "LGA": 1800,
+    "LGB": 1800,
+    "LGC": 1800,
+    "LLAB": 1800,
+    "LLBC": 1800,
+    "LLAC": 1800,
+    "LLABG": 1800,
+    "LLBCG": 1800,
+    "LLACG": 1800,
+    "LLLG": 1800
+  },
+  "scenario_counts": {
+    "S1": 3300,
+    "S2": 3300,
+    "S3": 3300,
+    "S4": 3300,
+    "S5": 3300,
+    "S6": 3300
+  },
+  "load_conditions": 60,
+  "load_scenario_groups": 360,
+  "timestamp_unique": 60,
+  "normal_rows": 1800,
+  "fault_rows": 18000,
+  "fault_buses": 164,
+  "fault_bus_counts_range": [
+    87,
+    143
+  ],
+  "normal_bus_metadata_must_be_masked": true,
+  "fault_resistance_ohm": {
+    "count": 18000.0,
+    "mean": 12.496755444444444,
+    "std": 7.195741050134861,
+    "min": 0.05,
+    "25%": 6.2745,
+    "50%": 12.4665,
+    "75%": 18.69325,
+    "max": 24.999
+  },
+  "missing_measurements": 0,
+  "infinite_measurements": 0,
+  "negative_magnitude_measurements": 0,
+  "unknown_measurement_columns": [],
+  "voltage_phase_channels": 175,
+  "voltage_buses": 93,
+  "current_phase_terminal_channels": 726,
+  "pmu_lists": {
+    "PMU_93": 93,
+    "PMU_56": 56,
+    "PMU_36": 36,
+    "PMU_20": 20
+  },
+  "unmeasured_requested_voltage_buses": {
+    "PMU_93": [],
+    "PMU_56": [
+      "bus1011",
+      "bus1016",
+      "bus2016",
+      "bus2023",
+      "bus2033",
+      "bus2039",
+      "bus3008",
+      "bus3023",
+      "bus3035",
+      "bus3038",
+      "bus3069",
+      "bus3076",
+      "bus3084",
+      "bus3087",
+      "bus3110",
+      "bus3113",
+      "bus3124",
+      "bus3149",
+      "bus3152",
+      "bus3159"
+    ],
+    "PMU_36": [
+      "bus1011",
+      "bus1016",
+      "bus2023",
+      "bus2033",
+      "bus2039",
+      "bus3008",
+      "bus3023",
+      "bus3035",
+      "bus3069",
+      "bus3076",
+      "bus3087",
+      "bus3107",
+      "bus3110",
+      "bus3124",
+      "bus3159"
+    ],
+    "PMU_20": [
+      "bus2006",
+      "bus2013",
+      "bus3005",
+      "bus3008",
+      "bus3015",
+      "bus3030",
+      "bus3033",
+      "bus3076",
+      "bus3082",
+      "bus3107",
+      "bus3140"
+    ]
+  },
+  "full_measurement_unique": 18057,
+  "full_measurement_duplicate_excess_rows": 1743,
+  "duplicate_measurements_conflicting_types": 0,
+  "duplicate_measurements_conflicting_fault_buses": 0,
+  "prefault_unique": 1033,
+  "postfault_unique": 18057,
+  "normal_max_raw_pre_post_difference": 0.0,
+  "measurement_ranges": {
+    "Vmag": {
+      "min": 143.94291504722057,
+      "p01": 4377.961215252013,
+      "median": 8214.055807373707,
+      "p99": 8577.388089276923,
+      "max": 9593.055645635606
+    },
+    "Vang": {
+      "min": -179.99997707279016,
+      "p01": -166.20038810235786,
+      "median": -30.705410396851157,
+      "p99": 90.00782751869895,
+      "max": 179.99953613115326
+    },
+    "Imag": {
+      "min": 0.0,
+      "p01": 2.3873153165198688e-11,
+      "median": 1.4762400177295172,
+      "p99": 501.86075748223647,
+      "max": 4713.941221175341
+    },
+    "Iang": {
+      "min": -179.99999311989615,
+      "p01": -176.3020117867622,
+      "median": 1.1648119587976353,
+      "p99": 179.37110189975542,
+      "max": 179.99999999032846
+    }
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+}

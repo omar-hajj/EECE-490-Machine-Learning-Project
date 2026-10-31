@@ -1,0 +1,25 @@
+{
+  "B0": {
+    "voltage_sag": 0.1,
+    "absolute_current_A": 72.49923939829759,
+    "rationale": "10% voltage sag OR twice training-normal 99th-percentile maximum current. Not a thermal/CT equipment setting: ratings absent."
+  },
+  "B1_detection": {
+    "current_weight": 0,
+    "threshold": 1e-06
+  },
+  "B1_classification": {
+    "single": 0.35,
+    "triple": 0.65,
+    "ground": 0.15,
+    "current_weight": 1,
+    "ground_source": "voltage"
+  },
+  "validation_macro_f1": 0.9880590779561759,
+  "selection": "Rules tuned on validation only; B0 nominal current scale uses training normals. No test predictions.",
+  "B1_localization": {
+    "current_weight": 0.1,
+    "validation_exact_bus_accuracy": 0.17972222222222223,
+    "candidates": 164
+  }
+}

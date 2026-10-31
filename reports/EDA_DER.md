@@ -1,0 +1,11 @@
+# Phase 2 — electrical exploratory analysis
+
+Figures use training/validation data for electrical relationships; the release distribution chart is a Phase 1 inventory. Final test predictions have not been generated. Every figure is in `reports/figures`.
+
+1. **01_case_distribution:** all 11 classes have 1,800 rows; the binary task has ten times as many faults as normal rows. This is a designed dataset, not an estimate of operational fault prevalence. Deduplication further changes prevalence, so precision/accuracy cannot be transferred to a utility's operating environment.
+2. **02_voltage_current:** phase voltage and line-current histograms reveal strongly different current scales, including unloaded branches. A raw current threshold requires equipment ratings that are absent. Relative pre/post current changes need a denominator floor. Voltage channels here are primary PMU voltages; they do not imply that secondary faults are directly measured.
+3. **03_resistance:** resistance-bin medians are {Interval(-0.001, 1.0, closed='right'): 0.8479, Interval(1.0, 5.0, closed='right'): 0.5281, Interval(5.0, 10.0, closed='right'): 0.3004, Interval(10.0, 15.0, closed='right'): 0.1963, Interval(15.0, 25.0, closed='right'): 0.1301}. The development-set Spearman correlation between resistance and maximum voltage-phasor change is -0.5062. This is an association across varying locations/types, not a paired causal resistance sweep. Weak signatures deserve stratified evaluation.
+4. **04_phase_signatures:** phase-selective voltage changes support electrical phase rules. Two-phase grounded and ungrounded faults may share affected phases, so phase magnitudes alone cannot distinguish them; zero-sequence/incremental current information is needed. Values aggregate each phase's maximum across instruments, so phases can attain maxima at different buses.
+5. **05_der_signatures:** compare entire voltage-disturbance distributions. Scenarios mix PV, EV and V2G, and their fault draws differ. They are not a controlled PV-only experiment. Source model/generation uncertainty and repeated electrical states prevent broad causal conclusions.
+
+No test-set EDA was used to select features, thresholds or hyperparameters. The original class/scenario inventory is not model-selection evidence.

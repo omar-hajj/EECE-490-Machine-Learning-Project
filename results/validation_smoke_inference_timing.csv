@@ -1,0 +1,2 @@
+experiment,partition,rows,baseline_batch_seconds,ml_batch_seconds,baseline_batch_ms_per_case,ml_batch_ms_per_case,timing_scope
+full,validation,3608,0.9060950999846682,1.2945368000073358,0.2511350055389879,0.3587962306007028,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction

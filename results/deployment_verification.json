@@ -1,0 +1,41 @@
+{
+  "checks_passed": true,
+  "checks": [
+    "balanced sequence physics",
+    "disjoint load groups",
+    "no duplicate vectors across partitions",
+    "API schema and invalid inputs",
+    "five replay types match saved frozen predictions",
+    "normal output masks bus/type",
+    "cache vs live features",
+    "OpenAPI"
+  ],
+  "warm_replay_latencies": [
+    {
+      "sample_id": 275,
+      "condition": "Normal",
+      "inference_ms": 70.25619992054999
+    },
+    {
+      "sample_id": 170,
+      "condition": "LGA",
+      "inference_ms": 32.353100017644465
+    },
+    {
+      "sample_id": 185,
+      "condition": "LLAB",
+      "inference_ms": 29.39360006712377
+    },
+    {
+      "sample_id": 200,
+      "condition": "LLABG",
+      "inference_ms": 32.40119991824031
+    },
+    {
+      "sample_id": 215,
+      "condition": "LLLG",
+      "inference_ms": 41.192400036379695
+    }
+  ],
+  "mean_inference_ms": 41.119299991987646
+}

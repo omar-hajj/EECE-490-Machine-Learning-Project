@@ -1,0 +1,13 @@
+experiment,partition,rows,baseline_batch_seconds,ml_batch_seconds,baseline_batch_ms_per_case,ml_batch_ms_per_case,timing_scope
+full,validation,3608,0.6001000999240205,0.767814900027588,0.16632486139801012,0.2128090077681785,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+full,test,3610,0.31574089999776334,0.8715714999707416,0.087462853184976,0.24143254846834947,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+available_93,validation,3608,0.35069569991901517,1.1313027000287548,0.09719947337001529,0.3135539634226039,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+available_93,test,3610,0.37779049994423985,1.288425900042057,0.10465110801779498,0.35690468145209336,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+available_36,validation,3608,0.263294400065206,0.9203750999877229,0.07297516631519013,0.25509287693673033,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+available_36,test,3610,0.2654946999391541,1.3742798999883235,0.07354423821029199,0.38068695290535276,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+available_21,validation,3608,0.3497151000192389,1.9581961000803858,0.0969276884753988,0.5427372782927898,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+available_21,test,3610,0.27817190007772297,2.271850800025277,0.07705592799936924,0.6293215512535393,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+available_9,validation,3608,0.25765869999304414,1.7833938000258058,0.07141316518654217,0.4942887472355338,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+available_9,test,3610,0.18723389995284379,1.1399515999946743,0.051865346247325146,0.3157760664805192,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+unseen_s6,validation,602,0.13373919995501637,0.24261950002983212,0.22215813946016008,0.40302242529872445,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction
+unseen_s6,test,601,0.13233049993868917,0.26070360001176596,0.22018386013093041,0.433783028305767,prediction from precomputed features/phasors; excludes disk/model loading and feature extraction

@@ -1,0 +1,47 @@
+{
+  "record": "https://zenodo.org/records/22904220",
+  "files": [
+    {
+      "file": "representative_load_Q.csv",
+      "bytes": 145933,
+      "md5": "382d09b1c3728f12b0e839c0ab2b6154",
+      "expected_md5": "382d09b1c3728f12b0e839c0ab2b6154",
+      "verified": true
+    },
+    {
+      "file": "labels_metadata_DERfaults.csv",
+      "bytes": 1714901,
+      "md5": "b7dd2c5244ad4fcf241f52c8e2eaf924",
+      "expected_md5": "b7dd2c5244ad4fcf241f52c8e2eaf924",
+      "verified": true
+    },
+    {
+      "file": "DERfaults_measurements.csv",
+      "bytes": 1343926563,
+      "md5": "567913f02849cd84ba7c033429434d1a",
+      "expected_md5": "567913f02849cd84ba7c033429434d1a",
+      "verified": true
+    },
+    {
+      "file": "representative_load_P.csv",
+      "bytes": 82745,
+      "md5": "4379ff0c905d8b890d8e9fb748eaa5fa",
+      "expected_md5": "4379ff0c905d8b890d8e9fb748eaa5fa",
+      "verified": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 9934,
+      "md5": "fd0028b604e6f38a4f5ee45e8caad8ec",
+      "expected_md5": "fd0028b604e6f38a4f5ee45e8caad8ec",
+      "verified": true
+    },
+    {
+      "file": "pmu_placement_configurations.csv",
+      "bytes": 1835,
+      "md5": "ff635f2dc7d2097513bb150ab3318110",
+      "expected_md5": "ff635f2dc7d2097513bb150ab3318110",
+      "verified": true
+    }
+  ]
+}

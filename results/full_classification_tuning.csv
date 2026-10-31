@@ -1,0 +1,3 @@
+task,tag,k,num_leaves,n_estimators,min_child_samples,best_iteration,validation_selection_score,training_seconds
+classification,full,256,7,100,10,100,0.7961189366177812,10.839113599970005
+classification,full,512,15,160,5,160,0.9975003783014594,42.354345400002785

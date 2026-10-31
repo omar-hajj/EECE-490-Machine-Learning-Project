@@ -1,135 +1,110 @@
-# Fault Detection and Diagnosis in Grid-Connected Photovoltaic Systems
+# Solar-integrated distribution fault diagnosis — EECE 490
 
-AUB EECE 490, Path A: investigate whether ML improves PV fault detection over
-credible rules across MPPT and IPPT control modes.
+Reproducible comparison of LightGBM and conventional electrical methods for fault detection, ten-class fault classification and 164-bus localization on DER-Fault. Built for a third-year Electrical and Computer Engineering project at the American University of Beirut.
 
-**Current stage: Stage 5 feature preparation completed; interval review pending; no models trained.**
+**Start with [the roadmap](PROJECT_ROADMAP.md) and [the executed feasibility audit](reports/DATASET_FEASIBILITY.md).** The audit found important restrictions on independent normal events, operating-state diversity and smaller PMU placements. Do not infer broad protection reliability from high simulation accuracy.
 
-Provisional [B0/B1 rule baselines](reports/BASELINES.md) are now implemented and
-calibrated on documented normal training windows only. No supervised classifier
-has been trained and no held-out performance has been measured.
+## Executed outcome
 
-Next practical task: complete the [label review worksheet](reports/LABEL_REVIEW_WORKSHEET.md).
-It links all 14 fault recordings to the existing waveform plots and leaves review
-decisions blank. The [readiness check](reports/LABEL_READINESS.md) reports current
-class coverage. Regenerate both with
-`.\.venv\Scripts\python.exe scripts/prepare_label_review.py` (save completed notes
-separately, because regeneration replaces the template).
+The [final performance report](reports/FINAL_PERFORMANCE_REPORT.md) contains actual held-out results, paired uncertainty, resistance/DER/sensor experiments and error cases.
 
-The [feature report](reports/FEATURES.md) documents 15 causal predictors and 10,654
-windows in the frozen partitions. Run
-`.\.venv\Scripts\python.exe scripts/extract_features.py` to regenerate them.
-Unreviewed labels remain missing; no accepted fault labels are available yet.
+| Held-out metric | B0 | B1 | LightGBM |
+|---|---:|---:|---:|
+| Detection recall | 66.08% | 100% | 100% |
+| Fault-type accuracy | N/A | 98.61% | 99.64% |
+| Exact-bus accuracy | N/A | 54.81% | 79.92% |
+| Top-3 bus accuracy | N/A | 95.94% | 98.72% |
+| Top-5 bus accuracy | N/A | 99.58% | 99.47% |
 
-The requested **60/20/20 holdout** is now fixed at 10 training, 3 validation and
-3 test recordings (62.5/18.75/18.75%, the closest feasible whole-recording split).
-See [the split design](reports/SPLIT.md) and [assignments](config/recording_split.json).
-Run `.\.venv\Scripts\python.exe scripts/split_gpvs.py` to reproduce/check it.
+This is not uniform ML superiority: B1 has better top-5 location accuracy and smaller mean network-distance errors in the reduced-sensor experiments. Only ten distinct normal test cases remain after deduplication, so low-FPR claims are unsupported. B1 localization uses an approximate source circuit and has transformer-related ambiguities. The API contract checks and actual Streamlit replay test passed. Docker image build/run remains unverified because Docker is absent on this computer.
 
-Stage 4 primary-paper review is complete: [verified fault mapping and timing limits](reports/LABELING.md).
-The [first interval review](reports/INTERVAL_REVIEW.md) adds six recordings with
-proposed regions and leaves eight ambiguous fault recordings unresolved.
-`annotations/intervals.csv` separates proposals from accepted labels; the validator
-keeps proposals out of training. Stage 5 feature preparation may proceed with
-missing labels, while independent interval review remains pending.
-The [recording register](annotations/recordings.csv) now identifies all F1-F7
-mechanisms. The paper confirms nominal 10 kHz sampling but explicitly lacks
-precise physical fault-onset times. F0 normal intervals are documented; positive
-intervals still need independent annotation before supervised training.
+## Dataset and provenance
 
-## Start here
+- [DER-Fault release 1.0](https://zenodo.org/records/22904220), by Fathima Razeeya Mohamed Razick and Petr Musilek.
+- [Associated paper](https://arxiv.org/abs/2609.36247).
+- [Original Iowa circuit source](https://wzy.ece.iastate.edu/Testsystem.html), associated with F. Bu et al., “A Time-series Distribution Test System based on Real Utility Data,” NAPS 2019.
 
-Open [the EDA notebook](notebooks/01_eda.ipynb). It contains executed tables,
-seven figures, explanations and the initial input-column decision.
+The dataset README declares CC BY 4.0 for the authors' released materials. The circuit is a separately sourced model; attribute its authors and consult their reuse terms. Neither original dataset nor circuit archive is committed here. The 3.05 GB `dataverse_files.zip` initially in the folder is an unrelated IEEE 34-node HIF dataset and is not used.
 
-- **Keep as inputs:** Ipv, Vpv, Vdc, ia, ib, ic, va, vb, vc.
-- **Keep separately:** Time, for window timing and evaluation, never as a predictor.
-- **Defer:** Iabc, If, Vabc, Vf until their estimator initialization and causal delay
-  are verified. This is provisional, not proof that these signals are useless.
+Verified release: 19,800 cases; 3,604 electrical columns plus `SampleID`; 93 measured voltage buses; 60 labeled load conditions; six PV/EV/V2G scenarios; 11 classes including normal; fault resistance 0.05–24.999 Ω. Fault-only labels contain 164 buses. The expanded original OpenDSS model has 436 named buses, including secondary/source buses. All measured voltage nodes/current lines/fault buses match the source model.
 
-The [column policy](config/input_columns.json) is applied by
-`scripts/gpvs_data.py:model_input_view`. It returns a copy with nine columns and
-all original rows. Raw data and the full EDA tables retain all 14 columns.
-No imputation, outlier clipping or learned feature selection has been applied.
+## Environment
 
-Read [the feasibility report](reports/FEASIBILITY.md) for provenance, unresolved
-labels and the proposed evaluation. Whole recordings must stay together in splits.
-Full-corpus EDA is descriptive and must be disclosed; future learned preprocessing
-and feature selection must use training data only.
-
-## Setup and run
-
-Keep `Data for EECE 490.zip` in the repository root. Use Python 3.12 and PowerShell:
+Use Python 3.12. Create a local virtual environment, then install the executed lock file:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe scripts/run_eda.py
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
 ```
 
-Alternatively, open `notebooks/01_eda.ipynb` in VS Code, select
-`.venv\Scripts\python.exe` as the notebook kernel and choose **Run All**.
-The command-line runner saves the executed notebook with embedded plots.
-It takes roughly a minute or two depending on the computer and loads the
-recordings into memory. It does not export a second large dataset.
+The current workspace already has `.venv`. Its executable is the working interpreter; the system `python` alias pointed to the Windows Store and did not work. `requirements.txt` documents supported dependency families; `requirements-lock.txt` records the actual executed environment. OpenDSSDirect is needed for source-network construction, not for ordinary saved-model inference.
 
-For the full MAT/CSV integrity audit:
+## Reproduce in order
+
+Run from this repository root. Downloads need internet access and roughly 2.5 GB additional disk space for originals and caches; preserve the unrelated archive separately if desired.
+
+The delivered directory already contains a frozen completed experiment. Use its saved models directly for inference. To **independently reproduce** the reported study, first make a separate checkout/copy, then remove `results/final_freeze.json` **only in that replica** before running the commands below. Preserve this original directory and its report. Reusing the documented split is appropriate for replication; further model development requires a new independent holdout and must not be presented as an untouched-test result.
 
 ```powershell
-.\.venv\Scripts\python.exe scripts/audit_gpvs.py
+.\.venv\Scripts\python.exe scripts/download_data.py
+.\.venv\Scripts\python.exe scripts/audit_der.py
+.\.venv\Scripts\python.exe scripts/topology.py
+.\.venv\Scripts\python.exe scripts/prepare.py
+.\.venv\Scripts\python.exe scripts/eda_der.py
+.\.venv\Scripts\python.exe scripts/conventional.py
+.\.venv\Scripts\python.exe scripts/train_der.py --experiment full
+.\.venv\Scripts\python.exe scripts/experiment_baselines.py --experiment physical
+.\.venv\Scripts\python.exe scripts/train_der.py --experiment physical
+.\.venv\Scripts\python.exe scripts/experiment_baselines.py --experiment sensors
+.\.venv\Scripts\python.exe scripts/train_der.py --experiment sensors
+.\.venv\Scripts\python.exe scripts/experiment_baselines.py --experiment unseen
+.\.venv\Scripts\python.exe scripts/train_der.py --experiment unseen
+.\.venv\Scripts\python.exe scripts/evaluate_der.py
+.\.venv\Scripts\python.exe scripts/explain_der.py
+.\.venv\Scripts\python.exe scripts/plot_results.py
+.\.venv\Scripts\python.exe scripts/verify_project.py
+.\.venv\Scripts\python.exe scripts/verify_dashboard.py
+.\.venv\Scripts\python.exe scripts/build_report.py
 ```
 
-On this workstation, the Windows `python` alias was unavailable. The existing
-`.venv` was created using bundled Python 3.12 and shared base packages. To recreate
-that environment here, use the following instead of the setup commands above:
+The split is frozen before electrical EDA so EDA does not guide choices using final test measurements. Training-only ANOVA screening is fitted separately for each model; deterministic phasor transformation itself has no learned parameters. Baselines are implemented and selected before ML. After all experiment variants are selected, evaluation hashes artifacts and opens the final test. Retuning is then refused. Run follow-up research in a new experiment directory with a new holdout; do not overwrite the completed frozen experiment to improve its reported scores.
+
+See [preprocessing and baseline reasoning](reports/PREPROCESSING_AND_BASELINES.md) and [EDA interpretation](reports/EDA_DER.md). The final report is generated at `reports/FINAL_PERFORMANCE_REPORT.md`; all rows originate from executed predictions.
+
+## Project structure
+
+| Path | Purpose |
+|---|---|
+| `data/raw/der_fault/` | Verified downloaded release; ignored by Git |
+| `data/raw/iowa/` | Original source circuit; ignored by Git |
+| `scripts/` | Audit, split/features, baselines, training, evaluation, explanations and checks |
+| `config/` | Feature schema, topology mapping, frozen sample split and sensor definitions |
+| `artifacts/` | Saved model/selector bundles, B1 network, thresholds and temperatures |
+| `results/` | Tuning history, metrics, paired uncertainty, predictions, error cases and confusion matrices |
+| `results/cache/` | Original numeric and engineered caches; ignored by Git |
+| `reports/` | Feasibility, engineering notes, EDA, plots and final results |
+| `app/` | Shared inference engine, FastAPI backend and Streamlit dashboard |
+
+## Run the prototype
 
 ```powershell
-& 'C:\Users\User\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -m venv --without-pip --system-site-packages .venv
-.\.venv\Scripts\python.exe -m pip install --target '.venv\Lib\site-packages' -r requirements.txt
-.\.venv\Scripts\python.exe scripts/run_eda.py
+.\.venv\Scripts\python.exe -m uvicorn app.api:app --host 127.0.0.1 --port 8000
+# In another terminal:
+.\.venv\Scripts\python.exe -m streamlit run app/dashboard.py
 ```
 
-## Submission files
+Open [API docs](http://127.0.0.1:8000/docs) and [dashboard](http://localhost:8501). Replay retained test cases, compare B0/B1/LightGBM, view actual labels and a source-topology schematic, or upload one complete measurement case. [API contract and units](reports/INFERENCE_API.md) explain the schema and confidence interpretation.
 
-| File | Purpose |
-| --- | --- |
-| `notebooks/01_eda.ipynb` | Main EDA narrative, code, plots and results |
-| `scripts/gpvs_data.py` | Read-only data loader and provisional input view |
-| `scripts/run_eda.py` | Re-execute the notebook with the current interpreter |
-| `config/input_columns.json` | Explicit, reversible input-column policy |
-| `annotations/recordings.csv` | Recording bounds and evidence-backed annotation status |
-| `reports/LABELING.md` | Label verification findings and completion procedure |
-| `scripts/audit_gpvs.py` | Reproduce data-quality and MAT/CSV consistency checks |
-| `reports/recording_inventory.csv` | Timing, dimensions, numerical quality and MAT comparison |
-| `reports/channel_statistics.csv` | Per-channel ranges, repetition and missing values |
-| `reports/checksums.json` | SHA-256 fingerprints of supplied raw files |
-| `reports/audit_environment.json` | Versions used to produce the audit |
-| `reports/FEASIBILITY.md` | Dataset limitations, course alignment and evaluation plan |
-| `requirements*.txt`, `.gitignore` | Reproducible setup and raw/private file exclusions |
+For Docker, run `docker compose up --build`. The replay cache is mounted read-only; raw datasets never enter the image. Docker availability/build verification is recorded separately in the roadmap, not inferred from the presence of a Dockerfile.
 
-The duplicate extracted dataset README and separate MAT inventory were removed;
-MAT comparison evidence is now in the recording inventory. PNG previews, temporary
-files, virtual environments, raw ZIP/MAT files and private `data/` are ignored by Git.
-The official dataset README remains intact inside the raw archive.
+## Research scope and honest comparison
 
-## Next steps
+The split groups all scenarios of each load index and removes exact measurement duplicates. Final test: 3,600 faults and **only ten distinct normal events**. Shared pre-fault electrical states remain across different load labels. Normal pre/post phasors are exactly identical, so low-FPR detection and broad unseen-state generalization cannot be established.
 
-- [x] Audit raw data and preserve local checksums.
-- [x] EDA and a reversible initial input-column policy.
-- [x] Verify F1-F7 descriptions and nominal sampling against the original paper.
-- [x] Record the paper's support for independent experiments and its timing limits.
-- [ ] Finish interval annotation and remaining calibration/latency checks.
-- [x] Freeze a recording-level approximate 60/20/20 split before model features.
-- [ ] Validate interval labels and session independence before fitting models.
-- [x] Implement and verify causal feature extraction within frozen partitions.
-- [x] Prepare provisional B0/B1 rules from accepted normal training windows.
-- [ ] Compare B0/B1 rules, a simple ML comparator and justified LightGBM.
-- [ ] Analyze errors and mode shift, then build the Dockerized API and replay UI.
+B0 supports detection only. B1 uses voltage/current deviations, physical phase mapping and sequence rules, plus a source-circuit current-injection residual location method covering all 164 labeled buses. Its circuit is approximate and its free-current model can confuse transformer-related buses. Any ML localization advantage must be limited to this implementation. Scenario changes mix PV, EV and V2G, and resistance bins mix fault types/locations. Smaller published PMU lists are not nested in released measurements; experiments use available intersections of 36, 21 and 9 PMUs.
 
-## Data attribution
+This is steady-state simulated decision support, **not certified protection**. It does not establish clearing time, noisy-event reliability, performance on another feeder or unseen fault buses. Probability scores do not represent field risk.
 
-Bakdi, A.; Guichi, A.; Mekhilef, S.; Bounoua, W. (2020), GPVS-Faults,
-Mendeley Data V1, [DOI 10.17632/n76t439f65.1](https://data.mendeley.com/datasets/n76t439f65/1),
-CC BY 4.0. Results here are descriptive summaries of the supplied copy, not
-model performance. Raw files are unchanged; remote checksum equality remains
-unverified. Original proposal/poster claims describe earlier intentions, not results.
+## Git checkpoints
+
+Review and commit coherent milestones: (1) provenance/audit/split/EDA, (2) baselines/training/evaluation and actual results, (3) tested inference application/docs. Use explicit file paths when staging: the initial working tree had unrelated tracked deletions, which must not be staged automatically. Do not use `git add .` or `git add -A` in this inherited state. Large public data, archives, caches and binary model/network artifacts are ignored. Keep artifact hashes and settings in Git; distribute reproducible binary artifacts separately when needed. No remote push is required to run this project.

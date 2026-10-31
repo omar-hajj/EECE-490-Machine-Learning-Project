@@ -1,0 +1,10 @@
+{
+  "buses": 436,
+  "nodes": 915,
+  "branches": 440,
+  "missing_voltage_nodes": [],
+  "missing_fault_buses": [],
+  "missing_current_lines": [],
+  "current_conductor_phase_relabels": 187,
+  "caution": "Original source topology matches names only; study-specific settings, taps and DER changes are not supplied. Treat circuit impedance matching as approximate."
+}

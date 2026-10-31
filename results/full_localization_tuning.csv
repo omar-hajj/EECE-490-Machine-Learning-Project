@@ -1,0 +1,3 @@
+task,tag,k,num_leaves,n_estimators,min_child_samples,best_iteration,validation_selection_score,training_seconds
+localization,full,256,7,100,10,50,0.7644444444444445,89.57598329999018
+localization,full,512,15,160,5,39,0.7969444444444445,82.28978079999797

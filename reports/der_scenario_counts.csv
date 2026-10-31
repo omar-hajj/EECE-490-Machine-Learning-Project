@@ -1,0 +1,7 @@
+Scenario_ID,PV_Penetration,EV_Penetration,V2G_Participation,count
+S1,0.0,0.0,0.0,3300
+S2,0.3,0.0,0.0,3300
+S3,0.5,0.2,0.0,3300
+S4,0.7,0.3,0.0,3300
+S5,0.7,0.3,0.3,3300
+S6,0.3,0.5,0.5,3300

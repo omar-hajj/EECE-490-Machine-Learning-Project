@@ -1,0 +1,3 @@
+task,tag,k,num_leaves,n_estimators,min_child_samples,best_iteration,validation_selection_score,training_seconds
+classification,available_36,256,7,100,10,100,0.9963865375652233,14.96907920006197
+classification,available_36,512,15,160,5,159,0.9983337148542972,38.69480130006559

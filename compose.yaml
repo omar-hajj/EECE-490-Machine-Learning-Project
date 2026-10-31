@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    ports: ["127.0.0.1:8000:8000"]
+    volumes:
+      - ./results/cache:/app/results/cache:ro
+  dashboard:
+    build: .
+    command: ["python", "-m", "streamlit", "run", "app/dashboard.py", "--server.address=0.0.0.0", "--server.port=8501", "--server.headless=true"]
+    ports: ["127.0.0.1:8501:8501"]
+    volumes:
+      - ./results/cache:/app/results/cache:ro

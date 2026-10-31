@@ -1,0 +1,35 @@
+[
+  {
+    "task": "detection",
+    "accuracy_difference_ML_minus_B1": 0.0,
+    "cluster_bootstrap_95_lower": 0.0,
+    "cluster_bootstrap_95_upper": 0.0,
+    "ML_only_correct": 0,
+    "B1_only_correct": 0,
+    "discordant_binomial_p_descriptive": 1.0,
+    "clusters": 12,
+    "caution": "12 metadata load clusters; shared electrical operating states remain. Binomial p ignores dependence and is descriptive only; use cluster interval as primary, not field-generalization evidence."
+  },
+  {
+    "task": "classification",
+    "accuracy_difference_ML_minus_B1": 0.010277777777777719,
+    "cluster_bootstrap_95_lower": 0.007222222222222222,
+    "cluster_bootstrap_95_upper": 0.01361111111111111,
+    "ML_only_correct": 46,
+    "B1_only_correct": 9,
+    "discordant_binomial_p_descriptive": 4.336383137015787e-07,
+    "clusters": 12,
+    "caution": "12 metadata load clusters; shared electrical operating states remain. Binomial p ignores dependence and is descriptive only; use cluster interval as primary, not field-generalization evidence."
+  },
+  {
+    "task": "localization",
+    "accuracy_difference_ML_minus_B1": 0.2511111111111112,
+    "cluster_bootstrap_95_lower": 0.22666666666666666,
+    "cluster_bootstrap_95_upper": 0.27416666666666667,
+    "ML_only_correct": 1192,
+    "B1_only_correct": 288,
+    "discordant_binomial_p_descriptive": 1.1899275598729838e-130,
+    "clusters": 12,
+    "caution": "12 metadata load clusters; shared electrical operating states remain. Binomial p ignores dependence and is descriptive only; use cluster interval as primary, not field-generalization evidence."
+  }
+]

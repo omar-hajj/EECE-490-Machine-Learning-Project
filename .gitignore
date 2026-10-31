@@ -1,14 +1,16 @@
-.venv/
-__pycache__/
-*.zip
-*.mat
+# Public datasets and unrelated original archive must not enter Git.
 data/
-tmp/
+*.zip
+.venv/
+.runtime/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+artifacts/*.joblib
+artifacts/*.npz
+artifacts/*.npy
+artifacts/*.txt
+results/cache/
+.streamlit/secrets.toml
 .env
-.env.*
-!.env.example
-.ipynb_checkpoints/
-# Charts are embedded in the submitted notebook; these are local preview copies.
-reports/figures/
-# Local user-supplied journal reference; cite its DOI rather than redistributing.
-/paper.pdf
+*.log
